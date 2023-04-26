@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="../../css/portal_gestao.css">
+		<title>Rental World</title>
+	</head>
+<body>
+	<header>
+		<div class="menu_h">
+			<div>
+				<grafic>
+					<a href="http://localhost/projeto/admin/login/portal_gestao.html"><img src="../../img/logo3.png" class="logo_menu"></a>
+				</grafic>
+			</div>
+
+			<nav class="nav_menu">
+				<ul>
+					<li>
+						<a href="http://localhost/projeto/admin/cadastro_categoria/categoria.html">Cadastro de Categoria</a>
+					</li>
+					<li>
+						<a href="http://localhost/projeto/admin/cadastro_transporte/cadastro_transporte.html">Cadastro de transporte</a>
+					</li>
+					<li>
+						<a href="http://localhost/projeto/admin/cadastro_cliente/cadastro_cliente.html">Cadastro de clientes</a>
+					</li>
+					<li>
+						<a href="http://localhost/projeto/admin/consultas/consultas.html">Consultas</a>
+					</li>
+					
+					<div class="portal_login">
+						<li>
+							<a href="http://localhost/projeto/admin/login/portal_gestao.html">Nome do Usuario</a>
+						</li>
+						<li>
+							<a href="http://localhost/projeto/index.html">Sair</a>
+						</li>
+					</div>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	
+	<form id="cadastro" name="cadastro" class="cadastro" method="post" action="conexao.php">
+		<div class="cadastro_categoria">
+			<label>Cadastre a categoria do transporte</lebel><br>
+			<input class="categoria" type="text" placeholder="veiculo leve, veiculo trasnporte, veiculo pesado" id="categoria" nome="categoria" required autofocus>
+			
+			<div><input class="botao" type="submit" id="btn_salvar" name="btn_salvar" value="Salvar"></div>
+		</div>
+	</form>
+
+	<main class="main">
+		<div class="conteudo">
+			<p> Rental World System <br></p>
+			<span> Usuario: Paulo Giovani<br>Data:<br>Hora:<br></span>
+		</div>
+	
+		<img src="../../img/frota.png" class="img_central">
+	</main>
+
+	<footer>
+		<div class="rodape">
+			<grafic><img src="../../img/localizacao.png" class="img_ender"></grafic>
+			<p>Av Paulista, 000 - Bairro Jardins, São Paulo - SP, CEP.: 01310-100 </p>
+		</div>
+
+		<div class="rodape">
+			<grafic><img src="../../img/atendimento.png" class="img_atendimento"></grafic>
+			<p>Central de atendimento 24hs:<br> 0800-000-000<br>0800-111-111 <br></p>
+		</div>
+
+		<div class="rodape">
+			<grafic><img src="../../img/contato.png" class="img_contato"></grafic>
+			<p>Fale conosco:<br> email: rentalworld@rentalworld.com.br</p>
+		</div>
+	</footer>
+
+</body>
+</html>
