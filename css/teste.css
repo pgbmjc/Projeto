@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+	margin: 0 auto;
+	padding: 0;
+	box-sizing: border-box;
+    font-family: 'Poppins', sans-serif, arial, helvetica, sans-serif;
+}
+
+.menu_h {
+	background-color: rgb(102, 153, 255);
+	width: 100%;
+}
+
+.logo_menu{
+	width: 120px;
+	margin-left: 100px;
+	margin-top: 2px;
+	float: left;
+}
+
+.nav_menu ul{
+	list-style: none;
+	font-size: 20px;
+	margin-left: 300px;
+}
+
+.nav_menu ul li {
+	display: inline;
+}
+
+.nav_menu ul li a {
+	color: #FFF;
+	padding: 20px;
+	display: inline-block;
+	text-decoration: none;
+	transition: background .4s;
+}
+
+.nav_menu ul li a:hover {
+	background-color: rgb(24, 139, 233);
+
+}
+
+.portal_login{
+	font-size: 12px;
+	float: right;
+	padding: 5px
+}
+
+/* até caberçalho */
