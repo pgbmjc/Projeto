@@ -7,27 +7,143 @@
     font-family: 'Poppins', sans-serif, arial, helvetica, sans-serif;
 }
 
-.menu_h {
-	background-color: rgb(102, 153, 255);
-	width: 100%;
+
+.menu_geral{
+   width: 100%;
+   display: flex;
+   
+}
+
+.menu_grup {
+    display: inline-flex;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.menu1{
+	background: rgb(102, 153, 255);
+    color: #fff;
+    width: 163px;
+    height: 35px;
+    border-radius: 10px 10px 0 0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-color: #fff;
+    border-left-style: solid;
+}
+
+.menu1 a{
+    color: #fff;
+}
+.menu2{
+	background-color: #000;
+    box-shadow: 0 3px 6px #00000029;
+    opacity: .5;
+    color: #fff;
+    width: 163px;
+    height: 35px;
+    border-radius: 10px 10px 0 0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-color: #fff;
+    border-left-style: solid;
+}
+
+.menu2 a{
+    color: #fff;
+}
+
+.menu3{
+	background-color: #622379;
+    box-shadow: 0 3px 6px #00000029;
+    opacity: .5;
+    color: #fff;
+    width: 163px;
+    height: 35px;
+    border-radius: 10px 10px 0 0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-color: #fff;
+    border-left-style: solid;
+}
+
+.menu3 a{
+    color: #fff;
+}
+
+.menu4{
+	background-color: #2d7923;
+    box-shadow: 0 3px 6px #00000029;
+    opacity: .5;
+    color: #fff;
+    width: 163px;
+    height: 35px;
+    border-radius: 10px 10px 0 0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-color: #fff;
+    border-left-style: solid;
+}
+
+.menu4 a{
+    color: #fff;
+}
+
+a, a:focus, a:hover {
+    text-decoration: none;
+}
+
+.a{
+    background-color: transparent;
+}   
+
+.sub_menu{
+    display: flex;
+    background-color: rgb(102, 153, 255);
+    width: 100%;
+    padding: .1rem;
+}
+
+.logo_menu_div{
+    width: 300px;
+    display: flex;
+    border: 1px solid rgb(255, 255, 255);
+	border-radius: 8px;
+    margin-left: 50px;
 }
 
 .logo_menu{
-	width: 120px;
-	margin-left: 100px;
-	margin-top: 2px;
-	float: left;
+	width: 220px;
+	margin:auto;
 }
 
-.nav_menu ul{
-	list-style: none;
-	font-size: 20px;
-	margin-left: 300px;
+.portal_cliente_div{
+    display: inline-block;
+    border: 1px solid rgb(255, 255, 255);
+	border-radius: 8px;
+    margin:auto;
+    margin-right: 100px;
 }
 
-.nav_menu ul li {
-	display: inline;
+.portal_cliente_div a{
+    color: #FFF;
+	padding: 20px;
+	display: inline-block;
+	text-decoration: none;
+	transition: background .4s;
+    margin-left: 50px;
+
 }
+
 
 .nav_menu ul li a {
 	color: #FFF;
