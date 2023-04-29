@@ -11,6 +11,11 @@ https://www.remove.bg/pt-br  - Remover fundos de fotos
 
 
 
+
+
+
+
+
 p {
 	font-size: 4rem;
 }
