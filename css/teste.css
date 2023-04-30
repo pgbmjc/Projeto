@@ -7,18 +7,15 @@
     font-family: 'Poppins', sans-serif, arial, helvetica, sans-serif;
 }
 
-
 .menu_geral{
    width: 100%;
    display: flex;
-   
 }
 
 .menu_grup {
     display: inline-flex;
     margin-left: auto;
     margin-right: auto;
-
 }
 
 .menu1{
@@ -110,24 +107,23 @@ a, a:focus, a:hover {
     display: flex;
     background-color: rgb(102, 153, 255);
     width: 100%;
-    padding: .1rem;
+    padding: .2rem;
 }
 
 .logo_menu_div{
-    width: 300px;
     display: flex;
     border: 1px solid rgb(255, 255, 255);
 	border-radius: 8px;
-    margin-left: 50px;
+    margin-left: 100px;
 }
 
 .logo_menu{
-	width: 220px;
+	width: 350px;
 	margin:auto;
 }
 
 .portal_cliente_div{
-    display: inline-block;
+    display: flex;
     border: 1px solid rgb(255, 255, 255);
 	border-radius: 8px;
     margin:auto;
@@ -135,33 +131,17 @@ a, a:focus, a:hover {
 }
 
 .portal_cliente_div a{
+    font-size: 10pt;
     color: #FFF;
-	padding: 20px;
 	display: inline-block;
 	text-decoration: none;
 	transition: background .4s;
+    margin:auto;
+}
+
+.fig_login{
+    width: 20px;
+    margin-top: 5px;
     margin-left: 50px;
-
+    margin-right: 10px;
 }
-
-
-.nav_menu ul li a {
-	color: #FFF;
-	padding: 20px;
-	display: inline-block;
-	text-decoration: none;
-	transition: background .4s;
-}
-
-.nav_menu ul li a:hover {
-	background-color: rgb(24, 139, 233);
-
-}
-
-.portal_login{
-	font-size: 12px;
-	float: right;
-	padding: 5px
-}
-
-/* até caberçalho */
