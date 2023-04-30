@@ -19,7 +19,7 @@
 }
 
 .menu1{
-	background: rgb(102, 153, 255);
+	background: rgb(0, 102, 204);
     color: #fff;
     width: 163px;
     height: 35px;
@@ -105,14 +105,14 @@ a, a:focus, a:hover {
 
 .sub_menu{
     display: flex;
-    background-color: rgb(102, 153, 255);
+    background-color: rgb(0, 168, 230);
     width: 100%;
     padding: .2rem;
 }
 
 .logo_menu_div{
     display: flex;
-    border: 1px solid rgb(255, 255, 255);
+    border: 0px solid rgb(255, 255, 255);
 	border-radius: 8px;
     margin-left: 100px;
 }
@@ -124,7 +124,7 @@ a, a:focus, a:hover {
 
 .portal_cliente_div{
     display: flex;
-    border: 1px solid rgb(255, 255, 255);
+    border: 0px solid rgb(255, 255, 255);
 	border-radius: 8px;
     margin:auto;
     margin-right: 100px;
@@ -145,3 +145,58 @@ a, a:focus, a:hover {
     margin-left: 50px;
     margin-right: 10px;
 }
+
+/* css do menu */
+
+.reserva{
+    display:flex;
+    width: 100%;
+    background-color: rgb(0, 112, 153);
+    padding: 1rem;
+}
+
+.consulta_locaçao{
+    display: inline-flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.div_input{
+    margin-left: 20px;
+}
+
+.input_consulta{
+	width: 400px;
+	padding: .4rem;
+    border: 1px solid rgb(255, 255, 255);
+	border-radius: 8px;
+}
+
+.input_datetime{
+	width: 200px;
+	padding: .4rem;
+    border: 1px solid rgb(255, 255, 255);
+	border-radius: 8px;
+}
+
+.botao{
+	color: #FFF;
+	width: 125px;
+	padding: .8rem;
+	margin-top: 1rem;
+	margin-left: 20px;
+	background: #511c04;
+	border: 1px solid blue;
+	border-radius: 8px;
+	cursor: pointer;
+	font-size: 12px;
+}
+
+legend{
+    font-size: 10pt;
+    color: #FFF;
+}
+
+/* pesquisa de reserva */
+
+
