@@ -42,7 +42,20 @@
 
 
 
+
+
+
+
 		<main class="main">
+           <div calss="carrossel">
+                <div class="carrossel1"><a href="index.php"><img src="img/fundo1.jpeg" class="fundo"></a></div>
+                <div class="carrossel1"><a href="index.php"><img src="img/fundo2.png" class="fundo"></a></div>
+                <div class="carrossel1"><a href="index.php"><img src="img/fundo3.png" class="fundo"></a></div>
+            
+            </div>
+
+
+        <!--
 			<div class="conteudo">
 				<p> Venha conhecer a Rental World </p>
 				<img src="img/frota.png" class="img_central">
@@ -72,6 +85,9 @@
 			<div class="depoimento">
 				<img src="img/depoimento.jpg" class="img_depoimento">
 			</div>
+
+        -->
+
 		</main>
 
 		<footer>
