@@ -7,6 +7,8 @@
     font-family: 'Poppins', sans-serif, arial, helvetica, sans-serif;
 }
 
+/* css do menu */
+
 .menu_geral{
    width: 100%;
    display: flex;
@@ -147,7 +149,7 @@ a, a:focus, a:hover {
     margin-right: 10px;
 }
 
-/* css do menu */
+/* pesquisa de reserva */
 
 .reserva{
     display:flex;
@@ -199,12 +201,12 @@ legend{
     color: #FFF;
 }
 
-/* pesquisa de reserva */
+/* efeito carrosel */
 
 .galery {
     width: 1600px;
     height: 500 px;
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     overflow: hidden;
     float:inline-start;
 }
@@ -231,5 +233,118 @@ legend{
     95% { margin-left: -300%; }
     100% { margin-left: -400%; }
 }
-/* carrosel */
 
+/* conteúdo da pagina */
+
+.conteudo{
+    display: flex;
+    width: 100%;
+    background-color: rgb(216, 239, 255);
+}
+
+.conteudo_h2{
+	text-align: center;
+	margin-top: 100px;
+    color: #000000;
+}
+
+.conteudo_inline{
+    display:flex;
+
+}
+
+.conteudo1{
+    display: inline-block;
+    width: 350px;
+    height: 430px;
+    border: 0px solid blue;
+	border-radius: 8px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    text-align: center;
+}
+
+.img_conteudo{
+	width: 350px;
+    height: 260px;
+    margin-top: 5px;
+}
+
+
+/* promoçoes da pagina */
+
+.promoçoes{
+    display: flex;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+.promoçoes_inline{
+    display:flex;
+}
+
+.promoçoes1{
+    display: inline-block;
+    width: 280px;
+    height: 200px;
+    border: 0px solid blue;
+	border-radius: 8px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 100px;
+    text-align: center;
+}
+
+.promoçoes2{
+    display: inline-block;
+    width: 280px;
+    height: 200px;
+    border: 0px solid blue;
+	border-radius: 8px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.img_promoçoes{
+	width: 280px;
+    height: 200px;
+    margin-top: 5px;
+}
+
+
+/* rodape da pagina */
+
+.img_ender{
+	width: 30px;
+}
+
+.img_atendimento{
+	width: 30px;
+}
+
+.img_contato{
+	width: 30px;
+}
+
+.contatos{
+	display:flex;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+footer{
+	display: flex;
+	background-color: rgb(51, 204, 255);
+}
+
+.rodape{
+	display: inline-block;
+	align-items: center;
+	width: 400px;
+	padding: 3rem;
+	text-align: left;
+	margin:auto;
+	margin-left: 100px;
+}
