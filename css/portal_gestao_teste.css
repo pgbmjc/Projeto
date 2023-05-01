@@ -263,6 +263,25 @@
 	border-radius: 8px;
 }
 
+/* pagina de consulta */
+
+.consulta_geral{
+	display: flex;
+}
+
+.consulta1{
+	display: inline-block;
+	font-size: 10pt;
+}
+
+.consulta_input{
+	width: 200px;
+	padding: 0.3rem;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	font-size: 8pt;
+}
+
 
 /* rodape da pagina */
 
