@@ -14,7 +14,7 @@
 		</div>
 
         <main>
-            <form id="portal_cliente" name="portal_cliente" class="portal_login" method="post" action="../admin/portal/portal_cliente.html">
+            <form id="portal_cliente" name="portal_cliente" class="portal_login" method="post" action="index.php">
 		    
                 <div><h1 class="login_h1">Acesse sua conta</h1></div>
 			
