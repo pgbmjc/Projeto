@@ -7,185 +7,319 @@
     font-family: 'Poppins', sans-serif, arial, helvetica, sans-serif;
 }
 
-.menu_h {
-	background-color: rgb(102, 153, 255);
-	width: 100%;
+/* pagina menu.htlm */
+
+.menu_geral{
+   width: 100%;
+   display: flex;
+}
+
+.menu_grup {
+    display: inline-flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.menu1{
+	background: rgb(0, 102, 204);
+    color: #fff;
+    width: 163px;
+    height: 35px;
+    border-radius: 10px 10px 0 0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-color: #fff;
+    border-left-style: solid;
+}
+
+.menu1 a{
+    color: #fff;
+}
+.menu2{
+	background-color: #000;
+    box-shadow: 0 3px 6px #00000029;
+    opacity: .5;
+    color: #fff;
+    width: 163px;
+    height: 35px;
+    border-radius: 10px 10px 0 0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-color: #fff;
+    border-left-style: solid;
+}
+
+.menu2 a{
+    color: #fff;
+}
+
+.menu3{
+	background-color: #622379;
+    box-shadow: 0 3px 6px #00000029;
+    opacity: .5;
+    color: #fff;
+    width: 163px;
+    height: 35px;
+    border-radius: 10px 10px 0 0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-color: #fff;
+    border-left-style: solid;
+}
+
+.menu3 a{
+    color: #fff;
+}
+
+.menu4{
+	background-color: #2d7923;
+    box-shadow: 0 3px 6px #00000029;
+    opacity: .5;
+    color: #fff;
+    width: 163px;
+    height: 35px;
+    border-radius: 10px 10px 0 0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-color: #fff;
+    border-left-style: solid;
+}
+
+.menu4 a{
+    color: #fff;
+}
+
+a, a:focus, a:hover {
+    text-decoration: none;
+}
+
+.a{
+    background-color: transparent;
+}   
+
+.sub_menu{
+    display: flex;
+    background-color: rgb(0, 168, 230);
+    width: 100%;
+    padding: .2rem;
+    
+}
+
+.logo_menu_div{
+    display: flex;
+    border: 0px solid rgb(255, 255, 255);
+	border-radius: 8px;
+    margin-left: 100px;
 }
 
 .logo_menu{
-	width: 120px;
-	margin-left: 100px;
-	margin-top: 2px;
-	float: left;
+	width: 350px;
+	margin:auto;
 }
 
-.nav_menu ul{
-	list-style: none;
-	font-size: 20px;
-	margin-left: 300px;
+.portal_cliente_div{
+    display: flex;
+    border: 0px solid rgb(255, 255, 255);
+	border-radius: 8px;
+    margin:auto;
+    margin-right: 100px;
 }
 
-.nav_menu ul li {
-	display: inline;
-}
-
-.nav_menu ul li a {
-	color: #FFF;
-	padding: 20px;
+.portal_cliente_div a{
+    font-size: 10pt;
+    color: #FFF;
 	display: inline-block;
 	text-decoration: none;
 	transition: background .4s;
+    margin:auto;
 }
 
-.nav_menu ul li a:hover {
-	background-color: rgb(24, 139, 233);
-
+.fig_login{
+    width: 20px;
+    margin-top: 5px;
+    margin-left: 50px;
+    margin-right: 10px;
 }
 
-.portal_login{
-	font-size: 12px;
-	float: right;
-	padding: 5px
-}
+/* pesquisa de reserva */
 
-/* até caberçalho */
+.reserva{
+    display:flex;
+    width: 100%;
+    background-color: rgb(0, 112, 153);
+    padding: 1rem;
+    
+}
 
 .consulta_locaçao{
-	margin-top: 5px;
-	width: 100%;
-	background-color: rgb(153, 204, 255);;
-	padding: 2rem;
+    display: inline-flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.div_input{
+    margin-left: 20px;
+}
+
+.input_consulta{
+	width: 400px;
+	padding: .4rem;
+    border: 1px solid rgb(255, 255, 255);
 	border-radius: 8px;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
-	border: 0px solid #00008B;
 }
 
-.local{
-	float:left;
-	margin-right: 5px;
-}
-
-.categoria{
-	float: left;
-	margin-right: 5px;
-}
-
-.data_retirada{
-	float:left;
-	margin-right: 5px;
-}
-
-.hora_retirada{
-	float:left;
-	margin-right: 5px;
-}
-
-.data_devoluçao{
-	float: left;
-	margin-right: 5px;
-}
-
-.hora_devoluçao{
-	float: left;
-}
-
-.modelo{
-	margin-top: 50px;
-}
-
-.consulta{
-	width: 300px;
-	padding: 1.0rem;
-}
-
-.consulta_datahora{
-	width: 150px;
-	padding: 1.0rem;
+.input_datetime{
+	width: 200px;
+	padding: .4rem;
+    border: 1px solid rgb(255, 255, 255);
+	border-radius: 8px;
 }
 
 .botao{
 	color: #FFF;
 	width: 125px;
-	padding: 0.5rem;
+	padding: .8rem;
 	margin-top: 1rem;
-	margin-bottom: 1rem;
+	margin-left: 20px;
 	background: #511c04;
 	border: 1px solid blue;
 	border-radius: 8px;
 	cursor: pointer;
-	font-size: 1rem;
+	font-size: 12px;
 }
 
-/* até reserva de carro do ciente */
-
-.main{
-	margin-top: 5px;
-	width: 100%;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
+legend{
+    font-size: 10pt;
+    color: #FFF;
 }
+
+/* efeito carrosel */
+
+.galery {
+    width: 1600px;
+    height: 500 px;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    float:inline-start;
+}
+
+.galery .fotos {
+    width: 500%;
+    animation-name: animacao;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+
+.galery .fotos img {
+    width: 19.9%;
+}
+
+@keyframes animacao {
+    0% { margin-left: 0; }
+    20% { margin-left: 0; }
+    25% { margin-left: -100%; }
+    45% { margin-left: -100%; }
+    50% { margin-left: -200%; }
+    70% { margin-left: -200%; }
+    75% { margin-left: -300%; }
+    95% { margin-left: -300%; }
+    100% { margin-left: -400%; }
+}
+
+/* conteúdo da pagina */
 
 .conteudo{
-	display:flex;
-	width: 100%;
-	padding: 4rem;
-	background-color: rgb(230, 242, 255);
-	flex-direction:column;
-	margin: top 20px;
-	margin-bottom: 20px;
-	font-size: 2rem;
-	color:rgb(13, 111, 177);
-	font-weight: bolder;
-}
-
-.img_central{
-	width: 800px;
+    display: flex;
+    width: 100%;
+    background-color: rgb(216, 239, 255);
 }
 
 .conteudo_h2{
 	text-align: center;
 	margin-top: 100px;
+    color: #000000;
 }
 
-.conteudo_ul{
-	list-style: none;
-	display:flex;
-	margin-top: 50px;
-	margin-bottom: 100px;
+.conteudo_inline{
+    display:flex;
+
 }
 
-.conteudo_li{
-	width: 400px;
-	border: 1px solid #ddd;
-	border-radius: 5px;
-	text-align: center;
-}
-
-.conteudo_h3{
-	font-size: 20pt;
+.conteudo1{
+    display: inline-block;
+    width: 350px;
+    height: 430px;
+    border: 0px solid blue;
+	border-radius: 8px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    text-align: center;
 }
 
 .img_conteudo{
-	width: 400px;
+	width: 350px;
+    height: 260px;
+    margin-top: 5px;
 }
 
-.img_forta{
-	width: 100%;
+
+/* promoçoes da pagina */
+
+.promoçoes{
+    display: flex;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
 }
 
-.img_seminovos{
-	width:100%;
+.promoçoes_inline{
+    display:flex;
 }
 
-.depoimento{
-	display: flex;
+.promoçoes1{
+    display: inline-block;
+    width: 280px;
+    height: 200px;
+    border: 0px solid blue;
+	border-radius: 8px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 100px;
+    text-align: center;
 }
 
-.img_depoimento{
-	width: 70%;
+.promoçoes2{
+    display: inline-block;
+    width: 280px;
+    height: 200px;
+    border: 0px solid blue;
+	border-radius: 8px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.img_promoçoes{
+	width: 280px;
+    height: 200px;
+    margin-top: 5px;
+}
+
+/* pagina contatos.php */
+
+
+.contatos{
+	display:flex;
+	margin-top: 40px;
+	margin-bottom: 40px;
 }
 
 .contatos_conteudo{
@@ -202,23 +336,18 @@
 	width: 500px;
 }
 
-/* css para login */
+/* a pagina frontas usa as mesmas caractristicas do conteudo do index*/
+/* inicio da pagina semi_novos usa as mesmas caractristicas do conteudo do index*/
 
-.portal_cliente{
-	width: 700px;
-	margin: 3rem auto;
+.conteudo_h3{
+	font-size: 20pt;
 }
 
-.portal_gestao{
-	width: 700px;
-	margin: 3rem auto;
+.img_seminovos{
+    width: 100%;
 }
 
-h1{
-	font-size: 2rem;
-	margin-bottom: 1rem;
-	color: #00008B;
-}
+/* login para o portal_cliente */
 
 .agrupamento_portal_cliente{
 	display: flex;
@@ -240,47 +369,20 @@ h1{
 	background-color: rgb(255, 255, 255);
 }
 
-.logo_login{
-		width: 250px;
+/* codigos iguais para o login cliente e login gestao*/
+
+.portal_login{
+	width: 700px;
+	margin: 3rem auto;
 }
 
-.botao_login{
-	color: #FFF;
-	width: 125px;
-	padding: 0.5rem;
-	margin-top: 1rem;
+.login_h1{
+	font-size: 2rem;
 	margin-bottom: 1rem;
-	border: 1px solid #CCC;
-	border-radius: 8px;
-	background: #511c04;
-	border: 0;
-	border: 1px solid blue;
-	border-radius: 8px;
-	cursor: pointer;
-	font-size: 1rem;
-}
-
-.login_cliente{
-	width: 300px;
-	padding: 0.5rem;
-	margin-top:0.5rem;
-	margin-bottom: 0.5rem;
-	border: 1px solid #CCC;
-	border-radius: 8px;
-	font-size: 0.8rem;
+	color: #00008B;
 }
 
 .login_usuario{
-	width: 300px;
-	padding: 0.5rem;
-	margin-top:0.5rem;
-	margin-bottom: 0.5rem;
-	border: 1px solid #CCC;
-	border-radius: 8px;
-	font-size: 0.8rem;
-}
-
-.senha_cliente{
 	width: 300px;
 	padding: 0.5rem;
 	margin-top:0.5rem;
@@ -300,7 +402,25 @@ h1{
 	font-size: 0.8rem;
 }
 
-/* rodape*/
+.logo_login{
+    width: 250px;
+}
+
+.botao_login{
+	color: #FFF;
+	width: 125px;
+	padding: 0.5rem;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	border-radius: 8px;
+	background: #511c04;
+	cursor: pointer;
+	font-size: 1rem;
+}
+
+
+
+/* rodape da pagina */
 
 .img_ender{
 	width: 30px;
@@ -312,12 +432,6 @@ h1{
 
 .img_contato{
 	width: 30px;
-}
-
-.contatos{
-	display:flex;
-	margin-top: 40px;
-	margin-bottom: 40px;
 }
 
 footer{
