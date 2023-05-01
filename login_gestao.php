@@ -14,7 +14,7 @@
 		</div>
 
         <main>
-            <form id="portal_gestao" name="portal_gestao" class="portal_login" method="post" action="../admin/portal/portal_gestao.html">
+            <form id="portal_gestao" name="portal_gestao" class="portal_login" method="post" action="admin/portal_gestao.php">
 		        
                 <div><h1 class="login_h1">Portal de Gestão interna</h1></div>
 			    

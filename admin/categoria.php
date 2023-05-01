@@ -1,54 +1,35 @@
 <!DOCTYPE html>
-
 <html lang="pt-br">
-
-<head>
-
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Portal</title>
-
-	<!-- ARQUIVO DE ESTILOS DO PORTAL -->
-	<link rel="stylesheet" type="text/css" href="../../css/estilo.css">
-	
-</head>
-
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="../css/portal_gestao_teste.css">
+		<title>Rental World</title>
+	</head>
 
 <body>
+		<header>
+    	    <div>
+				<?php include 'menu_gestao.html';?>
+			</div>
+		</header>
 
-		<form id="form_login" name="form_login" class="form_login" method="post" action="CategoriaCtrl.Class.php">
-
-			<div><h1>CATEGORIA DO VEÍCULO</h1></div>
-
-				<div class="agrupamento_login">
-
-					<div>
-
-						<div><label>CATEGORIA</label></div>	
-						<div><input type="text" placeholder="Categoria" id="categoria" name="categoria" required autofocus></div>
-
-
-					</div>
-
-				</div>
-
-						<div><input type="submit" id="btn_entrar" name="action" value="inserir"></div>
-
-
-		<nav id="voltar">
-			<ul>
-				<li>
-					<a href="http://localhost/projeto/admin/login/entrada.php">VOLTAR</div></a>
+	<main>
+		<form id="cadastro_categoria" name="cadastro_categoria" class="form_cadastro" method="post" action="conexao.php">
+			<div class="cadastro_categoria">
+				<label>Cadastre a categoria do veiculo</lebel><br>
 				
-				</li>
-
-		</nav>
-
-
-
-
-
+				<input class="input_cadastro" type="text" placeholder="veiculo leve, veiculo trasnporte, veiculo pesado" id="categoria" nome="categoria" required autofocus>
+			
+				<div><input class="botao" type="submit" id="btn_salvar" name="btn_salvar" value="Salvar"></div>
+			</div>
 		</form>
-</body>
 
+		<footer>
+       		<div>
+				<?php include 'rodape_gestao.html';?>
+			</div>
+		</footer>
+	</main>
+</body>
 </html>
