@@ -98,7 +98,27 @@
      color: #fff;
  }
  
- a, a:focus, a:hover {
+ .menu5{
+    background-color: #1f4b1a;
+    box-shadow: 0 3px 6px #00000029;
+    opacity: .5;
+    color: #fff;
+    width: 250px;
+    height: 35px;
+    border-radius: 10px 10px 0 0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-color: #fff;
+    border-left-style: solid;
+}
+
+.menu5 a{
+    color: #fff;
+}
+
+a, a:focus, a:hover {
      text-decoration: none;
  }
  
