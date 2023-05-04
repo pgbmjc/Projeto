@@ -9,66 +9,183 @@
 
 /* menu */
 
-.logo_menu{
-	width: 200px;
-	margin-left: 5px;
-	margin-top: 10px;
-	float: left;
 
+.menu_geral{
+    width: 100%;
+    display: flex;
+ }
+ 
+ .menu_grup {
+     display: inline-flex;
+     margin-left: auto;
+     margin-right: auto;
+ }
+ 
+ .menu1{
+     background: rgb(0, 102, 204);
+     color: #fff;
+     width: 250px;
+     height: 35px;
+     border-radius: 10px 10px 0 0;
+     font-size: 14px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     border-color: #fff;
+     border-left-style: solid;
+ }
+ 
+ .menu1 a{
+     color: #fff;
+ }
+ .menu2{
+     background-color: #000;
+     box-shadow: 0 3px 6px #00000029;
+     opacity: .5;
+     color: #fff;
+     width: 250px;
+     height: 35px;
+     border-radius: 10px 10px 0 0;
+     font-size: 14px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     border-color: #fff;
+     border-left-style: solid;
+ }
+ 
+ .menu2 a{
+     color: #fff;
+ }
+ 
+ .menu3{
+     background-color: #622379;
+     box-shadow: 0 3px 6px #00000029;
+     opacity: .5;
+     color: #fff;
+     width: 250px;
+     height: 35px;
+     border-radius: 10px 10px 0 0;
+     font-size: 14px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     border-color: #fff;
+     border-left-style: solid;
+ }
+ 
+ .menu3 a{
+     color: #fff;
+ }
+ 
+ .menu4{
+     background-color: #2d7923;
+     box-shadow: 0 3px 6px #00000029;
+     opacity: .5;
+     color: #fff;
+     width: 250px;
+     height: 35px;
+     border-radius: 10px 10px 0 0;
+     font-size: 14px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     border-color: #fff;
+     border-left-style: solid;
+ }
+ 
+ .menu4 a{
+     color: #fff;
+ }
+ 
+ .menu5{
+    background-color: #1f4b1a;
+    box-shadow: 0 3px 6px #00000029;
+    opacity: .5;
+    color: #fff;
+    width: 250px;
+    height: 35px;
+    border-radius: 10px 10px 0 0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-color: #fff;
+    border-left-style: solid;
 }
 
-.menu_h {
-	display: flex;
-	background-color: rgb(255, 182, 46);
-	width: 100%;
+.menu5 a{
+    color: #fff;
 }
 
-.nav_menu ul{
-	list-style: none;
-	font-size: 13pt;
-	margin-left: 300px;
-}
+a, a:focus, a:hover {
+     text-decoration: none;
+ }
+ 
+ .a{
+     background-color: transparent;
+ }   
+ 
+ .sub_menu{
+     display: flex;
+     background-color:rgb(255, 153, 51);
+     width: 100%;
+     padding: .2rem;
+     
+ }
+ 
+ .logo_menu_div{
+     display: flex;
+     border: 0px solid rgb(255, 255, 255);
+     border-radius: 8px;
+     margin-left: 100px;
+ }
+ 
+ .logo_menu{
+     width: 350px;
+     margin:auto;
+ }
+ 
+ .portal_cliente_div{
+     display: flex;
+     border: 0px solid rgb(255, 255, 255);
+     border-radius: 8px;
+     margin:auto;
+     margin-right: 100px;
+ }
+ 
+ .portal_cliente_div a{
+     font-size: 10pt;
+     color: #FFF;
+     display: inline-block;
+     text-decoration: none;
+     transition: background .4s;
+     margin:auto;
+ }
+ 
+ .fig_login{
+     width: 20px;
+     margin-top: 5px;
+     margin-left: 50px;
+     margin-right: 10px;
+ }
 
-.nav_menu ul li {
-	display: inline;
-}
+ /*parte central da pagina*/
 
-.nav_menu ul li a {
-	color: #FFF;
-	padding: 20px;
-	display: inline-block;
-	text-decoration: none;
-	transition: .4s;
-}
-
-.nav_menu ul li a:hover {
-	background-color: rgb(24, 139, 233);
-
-}
-
-.portal_login{
-	font-size: 12px;
-	float: right;
-	padding: 5px
-}
-
-/* até aqui caberçalho */
-
-.main{
+ .conteudo_portal{
 	display: flex;
 	align-items: center;
 	margin-top: 5px;
-	margin-bottom: 10px;
+	margin-bottom: 5px;
 	width: 100%;
 	background-color: rgb(230, 242, 255);
 	padding: 5rem;
-	justify-content: space-between;
 }
 
 .conteudo{
 	width: 100%;
-	justify-content: space-between;
-	margin-top: 10px;
+	display: inline;
+    margin-top: 10px;
 	margin-bottom: 10px;
 	font-size: 20pt;
 }
@@ -78,8 +195,11 @@
 	align-items: center;
 }
 
-.cadastro{
+/* padrao para todas */
+
+.form_cadastro{
 	margin-top: 3px;
+    margin-bottom: 3px;
 	width: 100%;
 	background-color: rgb(255, 219, 153);
 	padding: 2rem;
@@ -98,37 +218,51 @@
 	font-size: 1rem;
 }
 
-/* até aqwui conteudo padrao do portal*/
-
-.cadastro_categoria{
-	font-size: 25pt;
-}
-
-.categoria{
-	width: 500px;
-	padding: 1.0rem;
+.input_cadastro{
+	width: 400px;
+	padding: .5rem;
 	margin-top: 30px;
 	margin-bottom: 30px;
+    border: 1px solid rgb(255, 255, 255);
+	border-radius: 8px;
 }
 
-.cadastro_transporte{
-		font-size: 12pt;
+/* pagina cadastro de categoria */
 
+.cadastro_categoria{
+	font-size: 14pt;
 }
 
-.label_list{
+/* pagina cadastro de veículos */
+
+.cadastro_veiculo{
+    font-size: 12pt;
+}
+
+.cadastro_veiculo_label{
 	float:left;
-	margin-top: 25px;
+	margin-top: 15px;
 	width: 300px;
 	text-align: right;
 }
 
-.transporte_input{
+.input_veiculo{
 	width: 300px;
-	padding: 1.0rem;
+	padding: .5rem;
 	margin-top: 5px;
 	margin-bottom: 5px;
 	margin-left: 30px;
+    border: 1px solid rgb(255, 255, 255);
+	border-radius: 8px;
+}
+
+/* pagina cadastro cliente */
+
+.form_cadastro p{
+    margin:auto;
+    align-items: center;
+    text-align: center;
+    font-size: 20pt;
 }
 
 .cadastro_cliente_geral{
@@ -137,14 +271,19 @@
 
 .cadastro_cliente1{
 	display: inline-block;
+    font-size: 10pt;
 }
 
 .cadastro_cliente_input{
 	width: 500px;
-	padding: 1.0rem;
+	padding: .5rem;
 	margin-top: 10px;
 	margin-bottom: 10px;
+    border: 1px solid rgb(255, 255, 255);
+	border-radius: 8px;
 }
+
+/* pagina de consulta */
 
 .consulta_geral{
 	display: flex;
@@ -163,31 +302,8 @@
 	font-size: 8pt;
 }
 
-.form_resultado_consulta{
-	margin-top: 3px;
-	width: 100%;
-	background-color: rgb(255, 179, 102);
-	padding: 3rem;
-}
 
-.resultado_geral{
-	display: flex;
-}
-
-.resultado{
-	display: inline-block;
-
-}
-
-.resultado_input{
-	width: 270px;
-	padding: 0.1rem;
-	margin-top: 3px;
-	margin-bottom: 3px;
-	font-size: 8pt;
-}
-
-/* rodape */
+/* rodape da pagina */
 
 .img_ender{
 	width: 30px;
@@ -199,12 +315,6 @@
 
 .img_contato{
 	width: 30px;
-}
-
-.contatos{
-	display:flex;
-	margin-top: 40px;
-	margin-bottom: 40px;
 }
 
 footer{
