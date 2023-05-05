@@ -25,11 +25,20 @@ btn_expandir.addEventListener('click', function(){
 
 })
 
-//para //
+//para expandir o sub-menu 1//
 
-var btn_sub_expandir = document.querySelector('#btn_sub_expandir')
-var sub_menu_ul = document.querySelector('.sub_menu_ul')
+var btn_sub_expandir1 = document.querySelector('#btn_sub_expandir1')
+var sub_menu_ul1 = document.querySelector('#sub_menu_ul1')
 
-btn_sub_expandir.addEventListener('click', function(){
-    sub_menu_ul.classList.toggle('expandir1')
+btn_sub_expandir1.addEventListener('click', function(){
+    sub_menu_ul1.classList.toggle('expandir1')
+})
+
+//para expandir o sub-menu 2//
+
+var btn_sub_expandir2 = document.querySelector('#btn_sub_expandir2')
+var sub_menu_ul2 = document.querySelector('#sub_menu_ul2')
+
+btn_sub_expandir2.addEventListener('click', function(){
+    sub_menu_ul2.classList.toggle('expandir2')
 })
