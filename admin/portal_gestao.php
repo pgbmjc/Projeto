@@ -6,14 +6,14 @@
 		<link rel="stylesheet" type="text/css" href="../css/portal_gestao.css">
 		<title>Rental World</title>
 	</head>
-    
+
 <body>
 	<header>
-        <div>
-			<?php include 'menu_gestao.html';?>
+    	 <div>
+			<?php include 'menu_gestao_lateral.html';?>
 		</div>
 	</header>
-	
+
 	<main>
 		<div class="conteudo_portal">
 			<div class="conteudo">
@@ -28,10 +28,9 @@
 	</main>
 
 	<footer>
-        <div>
+       	<div>
 			<?php include 'rodape_gestao.html';?>
 		</div>
 	</footer>
-
 </body>
 </html>
