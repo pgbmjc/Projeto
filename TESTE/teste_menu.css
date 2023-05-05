@@ -13,63 +13,110 @@
     border: 1px solid red;
 }
 
-.sidebar{
+.menu_aside{
     position: fixed;
     top: 0;
+    left:0;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    width: 240px;
+    width: 50px;
     height: 100%;
-    padding: 40px 10px 30px 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     border-right: 1px solid rgb(232, 191, 191);
     background-color: rgb(0, 168, 230);
+    overflow: hidden;
+    transition: 0.5s;
 }
 
+/* para expandir sem uso do botao apenas proximando
+.menu_aside:hover{
+    width: 200px;
+}
+*/
 
-.sidebar_header{
+.menu_aside.expandir{
+    width: 240px;
+}
+
+.menu_btn{
     width: 100%;
     margin-bottom: 16px;
-    
+    margin-left: 10px;
 }
 
-.lista_menu{
+.lista_img{
     width: 35px;
-    min-height: 35px;
     transition: transform 0.4s;
-}
-.lista_menu:hover{
-    transform: scale(1.5);
-}
-
-.sidebar button{
-    height: 60px;
-    background: transparent;
-    border: 0;
-    font-family: inherit;
-    color: white;
     cursor: pointer;
-    text-align: left;
-    padding: 0;
 }
 
-.sidebar button > span{
+.lista_img:hover{
+    transform: scale(1.2);
+}
+
+.menu_nav{
+    margin-left: 1px;
+}
+
+.menu_ul{
+    height: 100%;
+    list-style-type: none;
+}
+
+.menu_li{
+    height: 80px;
+    background: transparent;
+    padding: 0;
+       
+}
+
+.menu_ul li a.ativo{
+    background-color:rgba(22, 123, 224, 0.8);
+}
+
+.menu_ul li a{
     display: inline-flex;
     align-items: center;
     gap: 12px;
     height: 48px;
-    padding: 0 16px 0 12px;
+    font-family: inherit;
+    color: rgb(9, 9, 9);
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 0 18px 0 10px;
     border-radius: 24px;
     line-height: 1;
-    transition: all 0.2s;
-
+    transition: all 0.3s;
 }
 
-.sidebar button:hover > span{
+.menu_ul li a:hover{
     background: rgba(22, 123, 224, 0.8);
 }
 
-.sidebar button i{
+.menu_ul li i{
     position: relative;
     font-size: 28px;
+    transition: 0.2s;
+}
+
+.sub_menu_ul{
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+    height: 5px;
+}
+
+.sub_menu_li{
+    padding: 0;
+    width: 100px;
+    text-align: right;
+    height: 50px;
+    list-style-type:none;
+    margin-top: 5px;
+}
+
+.sub_menu_ul.expandir1{
+    height: 230px;
 }

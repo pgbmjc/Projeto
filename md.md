@@ -63,3 +63,27 @@ ficava no cadastro de transporte... para puxar o tipo de categoria do banco
 							echo '<option value="'.$categoria['id'].'">'.$categoria['nome'].'</option>';
 						}	
 					?>
+
+
+
+
+					menuy
+
+
+					
+
+            <button>
+                <span>
+                    <i class="bi bi-postcard"></i>
+                    <span>Cadastro</span>
+                </span>
+            </button>
+
+
+            <button>
+                <span>
+                    <i class="bi bi-person-vcard"></i>
+                    <span>Cadastro Usuarios</span>
+                </span>
+            </button>
+

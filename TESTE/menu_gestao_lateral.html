@@ -9,43 +9,54 @@
 	</head>
 
 <doby>
-    <aside class="sidebar">
+    <aside class="menu_aside">
         
-        <header class="sidebar_header">
-           <img src="img/lista.png" class="lista_menu">
-        </header>
+        <div class="menu_btn">
+           <img src="img/lista.png" class="lista_img" id="btn_expandir">
+        </div>
 
-        <nav class="menu_lateral_nav">
-            <button>
-                <span>
-                    <i class="bi bi-house"></i>
-                    <span>Home</span>
-                </span>
-            </button>
+        <nav class="menu_nav">
+            <ul class="menu_ul">
+                <li class="menu_li">
+                    <a class="menu_a ativo" href="#">
+                        <span class="icon"><i class="bi bi-house"></i></span>
+                        <span class="txt">Home</span>
+                    </a>
+                </li>
+                
+                <li class="menu_li">
+                    <a class="menu_a" href="#">
+                        <span class="icon"><i class="bi bi-postcard"></i></span>
+                        <span class="txt">Cadastro</span>
+                    </a>
+                </li>
+                
+                <li class="menu_li">
+                    <a class="menu_a" href="#">
+                        <span class="icon"><i class="bi bi-person-vcard"></i></span>
+                        <span class="txt">cadastro cliente</span>
+                        <img src="img/lista.png" class="lista_img" id="btn_sub_expandir"> 
+                    </a>
+                    
+                    <ul class="sub_menu_ul">
+                        <li class="sub_menu_li"><a class="menu_a" href="#">Payment_Info_1</a></li>
+                        <li class="sub_menu_li"><a class="menu_a" href="#">Payment_Info_2</a></li>
+                        <li class="sub_menu_li"><a class="menu_a" href="#">Payment_Info_3</a></li>
+                        <li class="sub_menu_li"><a class="menu_a" href="#">Payment_Info_4</a></li>
+                    </ul>
+                </li>
 
-            <button>
-                <span>
-                    <i class="bi bi-postcard"></i>
-                    <span>Cadastro Veiculos</span>
-                </span>
-            </button>
 
 
-            <button>
-                <span>
-                    <i class="bi bi-person-vcard"></i>
-                    <span>Cadastro Usuarios</span>
-                </span>
-            </button>
+            </ul>
 
 
         </nav>
 
 
-
     </aside>
      
-     
+     <script src="menu.js"></script>
      
      
        
