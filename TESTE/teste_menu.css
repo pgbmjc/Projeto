@@ -57,6 +57,7 @@
 
 .menu_nav{
     margin-left: 1px;
+    height: 100%;
 }
 
 .menu_ul{
@@ -78,7 +79,7 @@
     display: inline-flex;
     align-items: center;
     gap: 12px;
-    height: 48px;
+    height: 40px;
     font-family: inherit;
     color: rgb(9, 9, 9);
     cursor: pointer;
@@ -117,15 +118,19 @@
     height: 48px;
     list-style-type:none;
     margin-top: 1px;
-    margin-left:80px;
+    margin-left:50px;
 }
 
 .sub_menu_ul.expandir1{
-    height: 180px;
+    height: 150px;
 }
 
 .sub_menu_ul.expandir2{
-    height: 180px;
+    height: 90px;
+}
+
+.sub_menu_ul.expandir3{
+    height: 150px;
 }
 
 .sub_menu_li .menu_a{

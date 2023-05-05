@@ -42,3 +42,15 @@ var sub_menu_ul2 = document.querySelector('#sub_menu_ul2')
 btn_sub_expandir2.addEventListener('click', function(){
     sub_menu_ul2.classList.toggle('expandir2')
 })
+
+//para expandir o sub-menu 3//
+
+var btn_sub_expandir3 = document.querySelector('#btn_sub_expandir3')
+var sub_menu_ul3 = document.querySelector('#sub_menu_ul3')
+
+btn_sub_expandir3.addEventListener('click', function(){
+    sub_menu_ul3.classList.toggle('expandir3')
+})
+
+
+
