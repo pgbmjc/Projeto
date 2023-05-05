@@ -1,27 +1,4 @@
-<title></title>
-
-Tag de Título que ficará no navegador
-
-href - Atributo de Ancoragem de páginas e links
-
-Ctrl + : = Comentar no código
-
 https://www.remove.bg/pt-br  - Remover fundos de fotos
-
-
-
-
-
-
-
-
-
-p {
-	font-size: 4rem;
-}
-
-
-ficava no cadastro de transporte... para puxar o tipo de categoria do banco
 
 <!-- <?php 
 					$mysqli = new mysqli("localhost","root","","db_portal");
@@ -41,7 +18,7 @@ ficava no cadastro de transporte... para puxar o tipo de categoria do banco
 						}	
 					?>	-->
 				
-				
+		
 
 				<div><h1>CADASTRO DE VEICULOS</h1></div>
 
@@ -67,23 +44,7 @@ ficava no cadastro de transporte... para puxar o tipo de categoria do banco
 
 
 
-					menuy
 
-
-					
-
-            <button>
-                <span>
-                    <i class="bi bi-postcard"></i>
-                    <span>Cadastro</span>
-                </span>
-            </button>
-
-
-            <button>
-                <span>
-                    <i class="bi bi-person-vcard"></i>
-                    <span>Cadastro Usuarios</span>
-                </span>
-            </button>
-
+<div>
+        <video class="video" autoplay="" muted="" loop="" src="img/video.mp4" alt="Motivo 1"></video>
+    </div>
