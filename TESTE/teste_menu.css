@@ -130,12 +130,13 @@
 /* FIM DO MENU LATERAL */
 
 .sub_menu{
+    position: fixed;
+    top: 0px;
     display: flex;
     background-color:rgb(0, 168, 230);
     width: 100%;
     max-height: 200px;
     padding: .2rem;
-    
 }
 
 .logo_menu_div{
