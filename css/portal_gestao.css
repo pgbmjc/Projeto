@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Flex:wght@200&display=swap');
 
 *{
 	margin: 0 auto;
 	padding: 0;
 	box-sizing: border-box;
-    font-family: 'Poppins', sans-serif, arial, helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif, arial, helvetica, sans-serif, 'Open Sans', 'Roboto Flex';
+
 }
 
 /* menuL horizontal */
@@ -74,15 +76,19 @@
     transition: 0.5s;
 }
 
-/* para expandir sem uso do botao apenas proximando
+
 .menu_aside:hover{
-    width: 200px;
+    width: 240px;
 }
-*/
+
+
+/* Para expandir o menu usando botao
 
 .menu_aside.expandir{
     width: 240px;
 }
+
+*/
 
 .menu_btn{
     width: 100%;
@@ -181,7 +187,11 @@
     font-size: 12px;
 }
 
-
+.afastamento_menu{
+    background-color: rgb(255, 0, 0);
+    width: 100%;
+    height: 48px;
+}
 /*parte central da pagina*/
 
 main{
@@ -208,32 +218,40 @@ main{
 /* padrao para todas */
 
 .form_cadastro{
-	margin-top: 3px;
-    margin-bottom: 3px;
-	margin-left: 300px;
+	margin-left: 250px;
     width: 100%;
-	background-color: rgb(255, 219, 153);
-	padding: 2rem;
-    height: 100%;
+    height: 500px;
+    padding: 2rem;
+}
+
+.form_cadastro legend, label{
+    font-family: 'roboto flex';
 }
 
 .botao{
 	color: #FFF;
-	width: 125px;
-	padding: 0.5rem;
+	width:80px;
+	padding: 0.4rem;
 	margin-top: 1rem;
 	margin-bottom: 1rem;
-	background: #511c04;
-	border: 1px solid blue;
+    margin-left: 10px;
+	background: #54ad62;
 	border-radius: 8px;
 	cursor: pointer;
-	font-size: 1rem;
+	font-size: 10pt;
+    font-family: 'roboto flex';
 }
+
+.botao:hover{
+    background-color: rgba(8, 91, 173, 0.8);
+    transform: scale(1.2);
+}
+
 
 .input_cadastro{
 	width: 400px;
 	padding: .5rem;
-	margin-top: 30px;
+	margin-top: 8px;
 	margin-bottom: 30px;
     border: 1px solid rgb(255, 255, 255);
 	border-radius: 8px;
@@ -242,7 +260,14 @@ main{
 /* pagina cadastro de categoria */
 
 .cadastro_categoria{
-	font-size: 14pt;
+    display:block;
+    text-align: left;
+    
+}
+
+.cadastro_categoria legend{
+    font-size: 14pt;
+    
 }
 
 /* pagina cadastro de veículos */
@@ -325,6 +350,8 @@ main{
 footer{
 	display: flex;
 	background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100%;
 }
 
 .rodape_geral{
