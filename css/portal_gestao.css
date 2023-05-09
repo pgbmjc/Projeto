@@ -222,6 +222,7 @@ main{
     width: 100%;
     height: 500px;
     padding: 2rem;
+    border: 1px solid red;
 }
 
 .form_cadastro legend, label{
@@ -240,6 +241,7 @@ main{
 	cursor: pointer;
 	font-size: 10pt;
     font-family: 'roboto flex';
+    transition: 0.2s;
 }
 
 .botao:hover{
@@ -247,28 +249,53 @@ main{
     transform: scale(1.2);
 }
 
-
 .input_cadastro{
 	width: 400px;
 	padding: .5rem;
 	margin-top: 8px;
 	margin-bottom: 30px;
+    margin-right: 20px;
     border: 1px solid rgb(255, 255, 255);
 	border-radius: 8px;
 }
 
-/* pagina cadastro de categoria */
+/* pagina cadastro de categoria / forma de pagamento / agencia */
 
-.cadastro_categoria{
-    display:block;
+.cadastro_div{
+    border: 1px solid blue;
+}
+
+.cadastro_div_campo legend{
+    text-align: right;
+}
+
+
+/* tabela para retorno */
+
+table{
+    margin-left: 250px;
+    margin-top: 30px;
+    width:1200px;
     text-align: left;
-    
+    border:1;
+    border: 1px solid #5d5a5a;
+    text-align: left;
+    padding: 8px;
 }
 
-.cadastro_categoria legend{
-    font-size: 14pt;
-    
+input[type="image" i] {
+    width: 10px;
+    appearance: none;
+    background-color: initial;
+    cursor: pointer;
+    padding: initial;
+    border: initial;
 }
+
+
+
+
+
 
 /* pagina cadastro de veículos */
 
@@ -292,6 +319,10 @@ main{
     border: 1px solid rgb(255, 255, 255);
 	border-radius: 8px;
 }
+
+
+
+
 
 /* pagina cadastro cliente */
 

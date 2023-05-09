@@ -16,15 +16,19 @@
 
 	<main>
 		<form id="forma_pagamento" name="forma_pagamento" class="form_cadastro" method="post" action="conexao.php">
-			<div class="cadastro_categoria">
-				<h2> Cadastre as formas de pagamentos </h2><br>
-			
-				<legend>Código</legend>
-				<input class="input_cadastro" type="number" placeholder="000" id="cod_pagamento" nome="cod_pagamento" required autofocus>
+			<h2> Formas de pagamentos </h2><br>
+			<div class="cadastro_div">
 				
-				<legend>Forma de pagamento</legend>
-				<input class="input_cadastro" type="text" placeholder="cartão, debito, dinheiro, etc" id="forma_pagamento" nome="forma_pagamento" required autofocus>
-				
+				<div class=cadastro_div_campo>
+					<label>Código</label>
+					<input class="input_cadastro" type="number" placeholder="000" id="cod_pagamento" nome="cod_pagamento" required autofocus>
+				</div>
+
+				<div class=cadastro_div_campo>
+					<label>Tipo de pagamento</label>
+					<input class="input_cadastro" type="text" placeholder="cartão, debito, dinheiro, etc" id="forma_pagamento" nome="forma_pagamento" required autofocus>
+				</div>
+
 				<div class="botoes">
                     <input class="botao" type="submit" id="btn_buscar" name="btn_buscar" value="Buscar">
                     <input class="botao" type="submit" id="btn_salvar" name="btn_salvar" value="Incluir">
@@ -32,6 +36,34 @@
                 </div>
 			</div>
 		</form>
+	
+		
+			<table>
+				<thead>
+					<tr>
+						<th>Codigo</th>
+						<th>Descrição</th>
+						<th>Editar</th>
+						<th>Apagar</th>
+					</tr>
+				</therd>
+				<tbody>
+					<tr>
+						<td>01</td>
+						<td>Dinheiro</td>
+						<td><input type="image" name="editar_table" id="btn_editar" src="../img/editar.png" onclick=""></td>
+						<td><input type="image" name="delete_table" id="btn_delete" src="../img/lixeira.png" onclick=""></td>
+					</tr>
+					<tr>
+						<td>02</td>
+						<td>Cartão</td>
+						<td><input type="image" name="editar_table" id="btn_editar" src="../img/editar.png" onclick=""></td>
+						<td><input type="image" name="delete_table" id="btn_delete" src="../img/lixeira.png" onclick=""></td>
+					</tr>
+				</tbody>
+			</table>
+		
+
 	</main>
 
 	<footer>

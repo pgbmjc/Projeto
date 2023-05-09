@@ -16,9 +16,9 @@
 
 	<main>
 		<form id="cadastro_categoria" name="cadastro_categoria" class="form_cadastro" method="post" action="conexao.php">
-			<div class="cadastro_categoria">
-				<h2> Cadastro de Categoria dos veiculos</h2><br>
-			
+			<h2> Cadastro de Categoria dos veiculos</h2><br>
+			<div class="cadastro_div">
+							
 				<legend>Código da Categoria</legend>
 				<input class="input_cadastro" type="number" placeholder="000" id="cod_categoria" nome="cod_categoria" required autofocus>
 				
