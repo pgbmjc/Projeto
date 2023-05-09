@@ -36,9 +36,9 @@
                 </div>
 			</div>
 		</form>
-	
-		
-			<table>
+	</main>
+
+	<table>
 				<thead>
 					<tr>
 						<th>Codigo</th>
@@ -61,10 +61,10 @@
 						<td><input type="image" name="delete_table" id="btn_delete" src="../img/lixeira.png" onclick=""></td>
 					</tr>
 				</tbody>
-			</table>
+		</table>
 		
 
-	</main>
+
 
 	<footer>
        	<div>

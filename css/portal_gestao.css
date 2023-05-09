@@ -277,10 +277,23 @@ table{
     margin-top: 30px;
     width:1200px;
     text-align: left;
-    border:1;
-    border: 1px solid #5d5a5a;
     text-align: left;
     padding: 8px;
+    border-collapse: collapse;
+}
+
+table, th, td{
+    border: 1px solid #8c2222;
+    padding: 1rem;
+}
+
+tr:nth-child(even){
+    background-color: #bdb1b1;
+}
+
+td {
+    display: table-cell;
+    vertical-align: inherit;
 }
 
 input[type="image" i] {
@@ -291,8 +304,6 @@ input[type="image" i] {
     padding: initial;
     border: initial;
 }
-
-
 
 
 
