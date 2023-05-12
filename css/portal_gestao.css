@@ -293,7 +293,7 @@ table, th, td{
 }
 
 tr:nth-child(even){
-    background-color: #bdb1b1;
+    background-color: #e4e3e3;
 }
 
 td {
