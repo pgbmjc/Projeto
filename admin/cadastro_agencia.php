@@ -21,7 +21,7 @@
 				
                 <div>
                     <label>Selecione a Cidade</label>
-                    <select class="input_veiculo" name="cidade_agencia" id="cidade_agencia">
+                    <select class="input_cadastro" name="cidade_agencia" id="cidade_agencia">
 						<option value="Manaus">Manaus</option>
 						<option value="Fortaleza">Fortaleza</option>
 						<option value="São Paulo">São Paulo</option>
@@ -50,7 +50,7 @@
 
                 <div>
 					<label>Complemento</label>
-					<input class="input_cadastro" type="text" placeholder="complemento" id="complemento" nome="complemento" required autofocus>
+					<input class="input_cadastro" type="text," placeholder="complemento" id="complemento" nome="complemento" required autofocus>
 				</div>
 
 
@@ -67,27 +67,45 @@
 			<thead>
 				<tr>
 					<th>Codigo</th>
-					<th>Descrição</th>
-					<th>Editar</th>
-					<th>Apagar</th>
+					<th>Cidade</th>
+					<th>Rua</th>
+					<th>Numero</th>
+					<th>Bairro</th>
+					<th>CEP</th>
+					<th>Complemento</th>
 				</tr>
 			</therd>
 			<tbody>
 				<tr>
 					<td>01</td>
-					<td>Veículos Leves</td>
+					<td>Manaus</td>
+					<td>Joaquim Nabuco</td>
+					<td>1515</td>
+					<td>Centro</td>
+					<td>69080-000</td>
+					<td>Proximo ao fuji</td>
 					<td><input type="image" name="editar_table" id="btn_editar" src="../img/editar.png" onclick=""></td>
 					<td><input type="image" name="delete_table" id="btn_delete" src="../img/lixeira.png" onclick=""></td>
 				</tr>
 				<tr>
 					<td>02</td>
-					<td>Veículos de Transporte</td>
+					<td>Manaus</td>
+					<td>Joaquim Nabuco</td>
+					<td>1515</td>
+					<td>Centro</td>
+					<td>69080-000</td>
+					<td>Proximo ao fuji</td>
 					<td><input type="image" name="editar_table" id="btn_editar" src="../img/editar.png" onclick=""></td>
 					<td><input type="image" name="delete_table" id="btn_delete" src="../img/lixeira.png" onclick=""></td>
 				</tr>
 				<tr>
 					<td>03</td>
-					<td>Veículos Pesados</td>
+					<td>Manaus</td>
+					<td>Joaquim Nabuco</td>
+					<td>1515</td>
+					<td>Centro</td>
+					<td>69080-000</td>
+					<td>Proximo ao fuji</td>
 					<td><input type="image" name="editar_table" id="btn_editar" src="../img/editar.png" onclick=""></td>
 					<td><input type="image" name="delete_table" id="btn_delete" src="../img/lixeira.png" onclick=""></td>
 				</tr>

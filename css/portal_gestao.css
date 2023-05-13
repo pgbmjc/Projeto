@@ -265,7 +265,6 @@ main{
     text-align: right;
 }
 
-
 /* tabela para retorno */
 
 table{
@@ -301,36 +300,6 @@ input[type="image" i] {
     padding: initial;
     border: initial;
 }
-
-
-
-
-/* pagina cadastro de veículos */
-
-.cadastro_veiculo{
-    font-size: 12pt;
-}
-
-.cadastro_veiculo_label{
-	float:left;
-	margin-top: 15px;
-	width: 300px;
-	text-align: right;
-}
-
-.input_veiculo{
-	width: 300px;
-	padding: .5rem;
-	margin-top: 5px;
-	margin-bottom: 5px;
-	margin-left: 30px;
-    border: 1px solid rgb(255, 255, 255);
-	border-radius: 8px;
-}
-
-
-
-
 
 /* pagina cadastro cliente */
 
