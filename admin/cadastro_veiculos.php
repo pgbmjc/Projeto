@@ -57,69 +57,67 @@
 			</div>
 
 			<div class="botoes">
-                    <input class="botao" type="submit" id="btn_buscar" name="btn_buscar" value="Buscar">
-                    <input class="botao" type="submit" id="btn_salvar" name="btn_salvar" value="Incluir">
-                    <input class="botao" type="reset" value="Limpar">
-            	</div>
+                <input class="botao" type="submit" id="btn_buscar" name="btn_buscar" value="Buscar">
+                <input class="botao" type="submit" id="btn_salvar" name="btn_salvar" value="Incluir">
+                <input class="botao" type="reset" value="Limpar">
+            </div>
 		</form>
-
-		<table>
-			<thead>
-				<tr>
-					<th>Codigo</th>
-					<th>Categoria</th>
-					<th>Marca</th>
-					<th>Modelo</th>
-					<th>Ano</th>
-					<th>Descrição</th>
-					<th>Placa</th>
-				</tr>
-			</therd>
-			<tbody>
-				<tr>
-					<td>01</td>
-					<td>Veiculos Leves</td>
-					<td>Chevrolet</td>
-					<td>Onix</td>
-					<td>2022</td>
-					<td>Vermelho - completo</td>
-					<td>JXA-1515</td>
-					<td><input type="image" name="editar_table" id="btn_editar" src="../img/editar.png" onclick=""></td>
-					<td><input type="image" name="delete_table" id="btn_delete" src="../img/lixeira.png" onclick=""></td>
-				</tr>
-				<tr>
-					<td>02</td>
-					<td>Veiculos de Transportes</td>
-					<td>Mercedes-Benz</td>
-					<td>Vitor Toure</td>
-					<td>2023</td>
-					<td>Parta - completo</td>
-					<td>JXA-2020</td>
-					<td><input type="image" name="editar_table" id="btn_editar" src="../img/editar.png" onclick=""></td>
-					<td><input type="image" name="delete_table" id="btn_delete" src="../img/lixeira.png" onclick=""></td>
-				</tr>
-				<tr>
-					<td>03</td>
-					<td>Veiculos Pesados</td>
-					<td>Mercedes-Benz</td>
-					<td>Accelo 814</td>
-					<td>2020</td>
-					<td>Branco - completo</td>
-					<td><JXA-3333></JXA-3333></td>
-					<td><input type="image" name="editar_table" id="btn_editar" src="../img/editar.png" onclick=""></td>
-					<td><input type="image" name="delete_table" id="btn_delete" src="../img/lixeira.png" onclick=""></td>
-				</tr>
-			</tbody>
-		</table>
-
-
-
-
-		<footer>
-       		<div>
-				<?php include 'rodape_gestao.html';?>
-			</div>
-		</footer>
 	</main>
+
+	<table>
+		<thead>
+			<tr>
+				<th>Codigo</th>
+				<th>Categoria</th>
+				<th>Marca</th>
+				<th>Modelo</th>
+				<th>Ano</th>
+				<th>Descrição</th>
+				<th>Placa</th>
+			</tr>
+		</therd>
+		<tbody>
+			<tr>
+				<td>01</td>
+				<td>Veiculos Leves</td>
+				<td>Chevrolet</td>
+				<td>Onix</td>
+				<td>2022</td>
+				<td>Vermelho - completo</td>
+				<td>JXA-1515</td>
+				<td><input type="image" name="editar_table" id="btn_editar" src="../img/editar.png" onclick=""></td>
+				<td><input type="image" name="delete_table" id="btn_delete" src="../img/lixeira.png" onclick=""></td>
+			</tr>
+			<tr>
+				<td>02</td>
+				<td>Veiculos de Transportes</td>
+				<td>Mercedes-Benz</td>
+				<td>Vitor Toure</td>
+				<td>2023</td>
+				<td>Parta - completo</td>
+				<td>JXA-2020</td>
+				<td><input type="image" name="editar_table" id="btn_editar" src="../img/editar.png" onclick=""></td>
+				<td><input type="image" name="delete_table" id="btn_delete" src="../img/lixeira.png" onclick=""></td>
+			</tr>
+			<tr>
+				<td>03</td>
+				<td>Veiculos Pesados</td>
+				<td>Mercedes-Benz</td>
+				<td>Accelo 814</td>
+				<td>2020</td>
+				<td>Branco - completo</td>
+				<td><JXA-3333></JXA-3333></td>
+				<td><input type="image" name="editar_table" id="btn_editar" src="../img/editar.png" onclick=""></td>
+				<td><input type="image" name="delete_table" id="btn_delete" src="../img/lixeira.png" onclick=""></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<footer>
+   		<div>
+			<?php include 'rodape_gestao.html';?>
+		</div>
+	</footer>
+
 </body>
 </html>

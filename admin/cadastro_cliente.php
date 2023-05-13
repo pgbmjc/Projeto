@@ -14,61 +14,94 @@
 			</div>
 		</header>
 
-	<main>
-		
-		<form id="cadastro" name="cadastro_cliente" class="form_cadastro" method="post" action="conexao.php">
-			<p>Cadastro de Cliente<br></p>
-			<div class="cadastro_cliente_geral">
-				<div class="cadastro_cliente1">
-					<div>
-						<legend>Nome Completo</legend>
-						<input class="cadastro_cliente_input" type="text" placeholder="Maria da Silva e Silva" id="nome" nome="nome" required autofocus>
-					</div>
-		
-					<div>
-						<legend>Celular</legend>
-						<input class="cadastro_cliente_input" type="tel" placeholder="99 99999-9999" pattern="[0-9]{2}-[0-9]{5}-[0-9]{4}" id="celular" nome="celular" required autofocus>
-					</div>
-
-					<div>
-						<legend>CPF</legend>
-						<input class="cadastro_cliente_input" type="number" maxlength="11" minlegth="11" placeholder="000.000.000-00" id="cpf" nome="cpf" required autofocus>
-					</div>
-
+		<main>
+		<form id="cliente" name="ciente" class="form_cadastro" method="post" action="conexao.php">
+		    <h2>Cadastro de Cliente</h2><br>
+		    
+			<div class="cadastro_div">
+				<div>
+					<label>Nome Completo</label>
+					<input class="input_cadastro" type="text" id="nome" nome="nome" required autofocus>
+				</div>
+				
+				<div>
+					<label>CPF</label>
+					<input class="input_cadastro" type="int" id="cpf" nome="cpf" required autofocus>
 				</div>
 
-				<div class="cadastro_cliente1">
-					<div>
-						<legend>Usuario do Cliente</legend>
-						<input class="cadastro_cliente_input" type="text" maxlength="11" minlegth="11" placeholder="usuario" id="cpf" nome="cpf" required autofocus>
-					</div>
-
-					<div>
-						<legend>Senha do cliente</legend>
-						<input class="cadastro_cliente_input" type="teste" maxlength="11" minlegth="11" placeholder="senha" id="cpf" nome="cpf" required autofocus>
-					</div>
-					
-					<div>
-						<legend>Sexo:</legend>
-						<select class="cadastro_cliente_input" name="tipo_sexo" id="tipo_sexo">
-							<option value="masculino">Masculino</option>
-							<option value="feminino">Feminino</option>
-							<option value="mutante">Mutante</option>
-						</select>
-					</div>
+				<div>
+					<label>Telefone</label>
+					<input class="input_cadastro" type="tel" placeholder="99 99999-9999" pattern="[0-9]{2}-[0-9]{5}-[0-9]{4}" id="telefone" nome="telefone" required autofocus>
 				</div>
+
+				<div>
+					<label>Usuario para login</label>
+					<input class="input_cadastro" type="text" id="usuario" nome="usuario" required autofocus>
+				</div>
+
+				<div>
+					<label>Senha</label>
+					<input class="input_cadastro" type="password" id="senha" nome="senha" required autofocus>
+				</div>
+			
 			</div>
 
-			<div><input class="botao" type="submit" id="btn_salvar" name="btn_salvar" value="Salvar"></div>
+			<div class="botoes">
+                <input class="botao" type="submit" id="btn_buscar" name="btn_buscar" value="Buscar">
+                <input class="botao" type="submit" id="btn_salvar" name="btn_salvar" value="Incluir">
+                <input class="botao" type="reset" value="Limpar">
+            </div>
 		</form>
-
-	
-
-		<footer>
-       		<div>
-				<?php include 'rodape_gestao.html';?>
-			</div>
-		</footer>
 	</main>
+
+	<table>
+		<thead>
+			<tr>
+				<th>Codigo</th>
+				<th>Cliente</th>
+				<th>CPF</th>
+				<th>Telefone</th>
+				<th>Usuario</th>
+				<th>Senha</th>
+			</tr>
+		</therd>
+		<tbody>
+			<tr>
+				<td>01</td>
+				<td>Paulo Giovani</td>
+				<td>555.555.555-00</td>
+				<td>92 99999-9999</td>
+				<td>pgbm</td>
+				<td>********</td>
+				<td><input type="image" name="editar_table" id="btn_editar" src="../img/editar.png" onclick=""></td>
+				<td><input type="image" name="delete_table" id="btn_delete" src="../img/lixeira.png" onclick=""></td>
+			</tr>
+			<tr>
+				<td>02</td>
+				<td>Lucas Lucas</td>
+				<td>555.555.555-00</td>
+				<td>92 99999-9999</td>
+				<td>luck</td>
+				<td>********</td>
+				<td><input type="image" name="editar_table" id="btn_editar" src="../img/editar.png" onclick=""></td>
+				<td><input type="image" name="delete_table" id="btn_delete" src="../img/lixeira.png" onclick=""></td>
+			</tr>
+			<tr>
+				<td>03</td>
+				<td>Rafael Rafael</td>
+				<td>555.555.555-00</td>
+				<td>92 99999-9999</td>
+				<td>rafa</td>
+				<td>********</td>
+				<td><input type="image" name="editar_table" id="btn_editar" src="../img/editar.png" onclick=""></td>
+				<td><input type="image" name="delete_table" id="btn_delete" src="../img/lixeira.png" onclick=""></td>
+			</tr>
+		</tbody>
+	</table>
+	<footer>
+       	<div>
+			<?php include 'rodape_gestao.html';?>
+		</div>
+	</footer>
 </body>
 </html>

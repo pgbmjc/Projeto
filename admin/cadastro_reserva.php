@@ -61,57 +61,57 @@
             	</div>
             </div>
 		</form>
-
-		<table>
-			<thead>
-				<tr>
-					<th>Cod reserva</th>
-					<th>Cliente</th>
-					<th>Veiculo</th>
-					<th>Data_Hora retirada</th>
-					<th>Data_Hora devolução</th>
-					<th>Data de reserva</th>
-				</tr>
-			</therd>
-			<tbody>
-				<tr>
-					<td>01</td>
-					<td>Paulo</td>
-					<td>Onix</td>
-					<td>10/05/2023 10:00</td>
-					<td>15/05/2023 23:00</td>
-					<td>01/05/2023</td>
-					<td><input type="image" name="editar_table" id="btn_editar" src="../img/editar.png" onclick=""></td>
-					<td><input type="image" name="delete_table" id="btn_delete" src="../img/lixeira.png" onclick=""></td>
-				</tr>
-				<tr>
-					<td>02</td>
-					<td>Lucas</td>
-					<td>Gol</td>
-					<td>01/07/2023 01:00</td>
-					<td>15/07/2023 15:00</td>
-					<td>13/05/2023</td>
-					<td><input type="image" name="editar_table" id="btn_editar" src="../img/editar.png" onclick=""></td>
-					<td><input type="image" name="delete_table" id="btn_delete" src="../img/lixeira.png" onclick=""></td>
-				</tr>
-				<tr>
-					<td>03</td>
-					<td>Rafael</td>
-					<td>Touro</td>
-					<td>05/06/2023 07:30</td>
-					<td>20/05/2023 22:00</td>
-					<td>20/05/2023</td>
-					<td><input type="image" name="editar_table" id="btn_editar" src="../img/editar.png" onclick=""></td>
-					<td><input type="image" name="delete_table" id="btn_delete" src="../img/lixeira.png" onclick=""></td>
-				</tr>
-			</tbody>
-		</table>
-
-        <footer>
-       		<div>
-				<?php include 'rodape_gestao.html';?>
-			</div>
-		</footer>
 	</main>
+	
+	<table>
+		<thead>
+			<tr>
+				<th>Cod reserva</th>
+				<th>Cliente</th>
+				<th>Veiculo</th>
+				<th>Data_Hora retirada</th>
+				<th>Data_Hora devolução</th>
+				<th>Data de reserva</th>
+			</tr>
+		</therd>
+		<tbody>
+			<tr>
+				<td>01</td>
+				<td>Paulo</td>
+				<td>Onix</td>
+				<td>10/05/2023 10:00</td>
+				<td>15/05/2023 23:00</td>
+				<td>01/05/2023</td>
+				<td><input type="image" name="editar_table" id="btn_editar" src="../img/editar.png" onclick=""></td>
+				<td><input type="image" name="delete_table" id="btn_delete" src="../img/lixeira.png" onclick=""></td>
+			</tr>
+			<tr>
+				<td>02</td>
+				<td>Lucas</td>
+				<td>Gol</td>
+				<td>01/07/2023 01:00</td>
+				<td>15/07/2023 15:00</td>
+				<td>13/05/2023</td>
+				<td><input type="image" name="editar_table" id="btn_editar" src="../img/editar.png" onclick=""></td>
+				<td><input type="image" name="delete_table" id="btn_delete" src="../img/lixeira.png" onclick=""></td>
+			</tr>
+			<tr>
+				<td>03</td>
+				<td>Rafael</td>
+				<td>Touro</td>
+				<td>05/06/2023 07:30</td>
+				<td>20/05/2023 22:00</td>
+				<td>20/05/2023</td>
+				<td><input type="image" name="editar_table" id="btn_editar" src="../img/editar.png" onclick=""></td>
+				<td><input type="image" name="delete_table" id="btn_delete" src="../img/lixeira.png" onclick=""></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<footer>
+   		<div>
+			<?php include 'rodape_gestao.html';?>
+		</div>
+	</footer>
 </body>
 </html>
