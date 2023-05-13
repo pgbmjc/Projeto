@@ -15,15 +15,45 @@
 	</header>
 
 	<main>
-		<form id="forma_pagamento" name="forma_pagamento" class="form_cadastro" method="post" action="conexao.php">
-			<h2> Formas de pagamentos </h2><br>
+		<form id="agencia" name="agencia" class="form_cadastro" method="post" action="conexao.php">
+			<h2> Cadastro da Agencia </h2><br>
 			<div class="cadastro_div">
 				
+                <div>
+                    <label>Selecione a Cidade</label>
+                    <select class="input_veiculo" name="cidade_agencia" id="cidade_agencia">
+						<option value="Manaus">Manaus</option>
+						<option value="Fortaleza">Fortaleza</option>
+						<option value="São Paulo">São Paulo</option>
+					</select>
+                </div>
+
 				<div>
-					<label>Tipo de pagamento</label>
-					<input class="input_cadastro" type="text" placeholder="cartão, debito, dinheiro, etc" id="tipo_pagamento" nome="tipo_pagamento" required autofocus>
+					<label>Rua</label>
+					<input class="input_cadastro" type="text" placeholder="rua, av" id="rua" nome="rua" required autofocus>
 				</div>
 				
+                <div>
+					<label>Numero</label>
+					<input class="input_cadastro" type="text" placeholder="informe o numero" id="numero" nome="numero" required autofocus>
+				</div>
+
+                <div>
+					<label>Bairro</label>
+					<input class="input_cadastro" type="text" placeholder="informe o bairro" id="bairro" nome="bairro" required autofocus>
+				</div>
+
+                <div>
+					<label>Cep</label>
+					<input class="input_cadastro" type="number" placeholder="informe o CEP" id="cep" nome="cep" required autofocus>
+				</div>
+
+                <div>
+					<label>Complemento</label>
+					<input class="input_cadastro" type="text" placeholder="complemento" id="complemento" nome="complemento" required autofocus>
+				</div>
+
+
 			</div>
 				<div class="botoes">
                     <input class="botao" type="submit" id="btn_buscar" name="btn_buscar" value="Buscar">
@@ -33,7 +63,7 @@
 		</form>
 	</main>
 
-		<table>
+	<table>
 			<thead>
 				<tr>
 					<th>Codigo</th>
@@ -45,25 +75,19 @@
 			<tbody>
 				<tr>
 					<td>01</td>
-					<td>Dinheiro</td>
+					<td>Veículos Leves</td>
 					<td><input type="image" name="editar_table" id="btn_editar" src="../img/editar.png" onclick=""></td>
 					<td><input type="image" name="delete_table" id="btn_delete" src="../img/lixeira.png" onclick=""></td>
 				</tr>
 				<tr>
 					<td>02</td>
-					<td>Cartão de Credito</td>
+					<td>Veículos de Transporte</td>
 					<td><input type="image" name="editar_table" id="btn_editar" src="../img/editar.png" onclick=""></td>
 					<td><input type="image" name="delete_table" id="btn_delete" src="../img/lixeira.png" onclick=""></td>
 				</tr>
 				<tr>
 					<td>03</td>
-					<td>Cartão de Debito</td>
-					<td><input type="image" name="editar_table" id="btn_editar" src="../img/editar.png" onclick=""></td>
-					<td><input type="image" name="delete_table" id="btn_delete" src="../img/lixeira.png" onclick=""></td>
-				</tr>
-				<tr>
-					<td>04</td>
-					<td>Pix</td>
+					<td>Veículos Pesados</td>
 					<td><input type="image" name="editar_table" id="btn_editar" src="../img/editar.png" onclick=""></td>
 					<td><input type="image" name="delete_table" id="btn_delete" src="../img/lixeira.png" onclick=""></td>
 				</tr>

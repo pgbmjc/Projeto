@@ -15,13 +15,13 @@
 	</header>
 
 	<main>
-		<form id="cadastro_categoria" name="cadastro_categoria" class="form_cadastro" method="post" action="conexao.php">
+		<form id="categoria" name="categoria" class="form_cadastro" method="post" action="conexao.php">
 			<h2> Cadastro de Categoria </h2><br>
 			<div class="cadastro_div">
 				
 				<div>
 					<label>Tipo de Categoria</label>
-					<input class="input_cadastro" type="text" placeholder="Leve, Transporte, Pesado" id="categoria" nome="categoria" required autofocus>
+					<input class="input_cadastro" type="text" placeholder="Leve, Transporte, Pesado" id="tipo_categoria" nome="categoria" required autofocus>
 				</div>
 				
 			</div>
