@@ -10,7 +10,7 @@
 <body>
 	<header>
     	 <div>
-			<?php include 'menu_gestao_lateral.html';?>
+			<?php include 'menu_gestao.html';?>
 		</div>
 	</header>
 

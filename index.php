@@ -18,12 +18,12 @@
 		    <form id="consulta_locaçao" name="consulta_locaçao" class="consulta_locaçao" method="post" action="conexao.php">
 			    <div class="div_input">
 				    <legend>Local da Retirada</legend>
-				    <input class="input_consulta" type="text" placeholder="onde você quer alugar" id="input_local" nome="input_local" required autofocus>
+				    <input class="input_consulta" type="search" placeholder="onde você quer alugar" id="input_local" nome="input_local">
 			    </div>
 
 			    <div class="div_input">
 				    <legend>Categoria</legend>
-				    <input class="input_consulta" type="text" placeholder="escolha a categoria" id="categoria" nome="categoria" required autofocus>
+				    <input class="input_consulta" type="search" placeholder="escolha a categoria" id="categoria" nome="categoria" required autofocus>
 			    </div>
 		
 			    <div class="div_input">

@@ -10,23 +10,23 @@
 <body>
 	<header>
     	 <div>
-			<?php include 'menu_gestao_lateral.html';?>
+			<?php include 'menu_gestao.html';?>
 		</div>
 	</header>
 
 	<main>
-		<form id="forma_pagamento" name="forma_pagamento" class="form_cadastro" method="post" action="conexao.php">
-			<h2> Formas de pagamentos </h2><br>
+		<form id="cidade" name="cidade" class="form_cadastro" method="post" action="conexao.php">
+			<h2> Cidade </h2><br>
 			<div class="cadastro_div">
 				
-				<div class=cadastro_div_codigo>
-					<label>Código</label>
-					<input class="input_cadastro" type="number" placeholder="000" id="cod_pagamento" nome="cod_pagamento" required autofocus>
+				<div>
+					<label>Estado</label>
+					<input class="input_cadastro" type="text" placeholder="amazonas, são paulo" id="estado" nome="estado" required autofocus>
 				</div>
 
-				<div class=cadastro_div_descricao>
-					<label>Tipo de pagamento</label>
-					<input class="input_cadastro" type="text" placeholder="cartão, debito, dinheiro, etc" id="forma_pagamento" nome="forma_pagamento" required autofocus>
+				<div>
+					<label>Cidade</label>
+					<input class="input_cadastro" type="text" placeholder="manaus, fortaleza" id="cidade" nome="cidade" required autofocus>
 				</div>
 				
 			</div>
@@ -42,7 +42,8 @@
 				<thead>
 					<tr>
 						<th>Codigo</th>
-						<th>Descrição</th>
+						<th>Estado</th>
+                        <th>Cidade</th>
 						<th>Editar</th>
 						<th>Apagar</th>
 					</tr>
@@ -50,26 +51,30 @@
 				<tbody>
 					<tr>
 						<td>01</td>
-						<td>Dinheiro</td>
+						<td>Amazonas</td>
+                        <td>Manaus</td>
 						<td><input type="image" name="editar_table" id="btn_editar" src="../img/editar.png" onclick=""></td>
 						<td><input type="image" name="delete_table" id="btn_delete" src="../img/lixeira.png" onclick=""></td>
 					</tr>
 					<tr>
 						<td>02</td>
-						<td>Cartão de Credito</td>
+						<td>Ceara</td>
+                        <td>Fortaleza</td>
 						<td><input type="image" name="editar_table" id="btn_editar" src="../img/editar.png" onclick=""></td>
 						<td><input type="image" name="delete_table" id="btn_delete" src="../img/lixeira.png" onclick=""></td>
 					</tr>
 					<tr>
 						<td>03</td>
-						<td>Cartão de Debito</td>
+						<td>São Paulo</td>
+                        <td>São Paulo</td>
 						<td><input type="image" name="editar_table" id="btn_editar" src="../img/editar.png" onclick=""></td>
 						<td><input type="image" name="delete_table" id="btn_delete" src="../img/lixeira.png" onclick=""></td>
 					</tr>
 
 					<tr>
 						<td>04</td>
-						<td>Pix</td>
+						<td>Alagoas</td>
+                        <td>Maceio</td>
 						<td><input type="image" name="editar_table" id="btn_editar" src="../img/editar.png" onclick=""></td>
 						<td><input type="image" name="delete_table" id="btn_delete" src="../img/lixeira.png" onclick=""></td>
 					</tr>
@@ -77,9 +82,6 @@
 
 				</tbody>
 		</table>
-		
-
-
 
 	<footer>
        	<div>

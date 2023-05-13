@@ -15,13 +15,13 @@
 	</header>
 
 	<main>
-		<form id="cadastro_categoria" name="cadastro_categoria" class="form_cadastro" method="post" action="conexao.php">
-			<h2> Cadastro de Categoria </h2><br>
+		<form id="forma_pagamento" name="forma_pagamento" class="form_cadastro" method="post" action="conexao.php">
+			<h2> Formas de pagamentos </h2><br>
 			<div class="cadastro_div">
 				
 				<div>
-					<label>Tipo de Categoria</label>
-					<input class="input_cadastro" type="text" placeholder="Leve, Transporte, Pesado" id="categoria" nome="categoria" required autofocus>
+					<label>Tipo de pagamento</label>
+					<input class="input_cadastro" type="text" placeholder="cartão, debito, dinheiro, etc" id="forma_pagamento" nome="forma_pagamento" required autofocus>
 				</div>
 				
 			</div>
@@ -33,7 +33,7 @@
 		</form>
 	</main>
 
-	<table>
+		<table>
 			<thead>
 				<tr>
 					<th>Codigo</th>
@@ -45,19 +45,25 @@
 			<tbody>
 				<tr>
 					<td>01</td>
-					<td>Veículos Leves</td>
+					<td>Dinheiro</td>
 					<td><input type="image" name="editar_table" id="btn_editar" src="../img/editar.png" onclick=""></td>
 					<td><input type="image" name="delete_table" id="btn_delete" src="../img/lixeira.png" onclick=""></td>
 				</tr>
 				<tr>
 					<td>02</td>
-					<td>Veículos de Transporte</td>
+					<td>Cartão de Credito</td>
 					<td><input type="image" name="editar_table" id="btn_editar" src="../img/editar.png" onclick=""></td>
 					<td><input type="image" name="delete_table" id="btn_delete" src="../img/lixeira.png" onclick=""></td>
 				</tr>
 				<tr>
 					<td>03</td>
-					<td>Veículos Pesados</td>
+					<td>Cartão de Debito</td>
+					<td><input type="image" name="editar_table" id="btn_editar" src="../img/editar.png" onclick=""></td>
+					<td><input type="image" name="delete_table" id="btn_delete" src="../img/lixeira.png" onclick=""></td>
+				</tr>
+				<tr>
+					<td>04</td>
+					<td>Pix</td>
 					<td><input type="image" name="editar_table" id="btn_editar" src="../img/editar.png" onclick=""></td>
 					<td><input type="image" name="delete_table" id="btn_delete" src="../img/lixeira.png" onclick=""></td>
 				</tr>
