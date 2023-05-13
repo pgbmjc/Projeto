@@ -221,7 +221,6 @@ main{
 	width: 100%;
     margin-left: 250px;
     padding: 20px;
-    border: 1px solid red;
 }
 
 .form_cadastro legend, label{
@@ -261,7 +260,6 @@ main{
 
 .cadastro_div{
     display: inline-block;
-    border: 1px solid blue;
     text-align: right;
 }
 
