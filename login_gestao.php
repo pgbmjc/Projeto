@@ -14,17 +14,17 @@
 		</div>
 
         <main>
-            <form id="portal_gestao" name="portal_gestao" class="portal_login" method="post" action="admin/portal_gestao.php">
+            <form id="portal_gestao" name="portal_gestao" class="portal_login" method="post" action="valida_login.php">
 		        
                 <div><h1 class="login_h1">Portal de Gestão interna</h1></div>
 			    
                 <div class="agrupamento_portal_gestao">
 				    <div>
 				    	<div><label>Digite seu usuario</label></div>	
-				    	<div><input class="login_usuario" type="text" id="login_usuario" name="login_usuario" required autofocus></div>
+				    	<div><input class="login_usuario" type="text" id="login_usuario" name="usuario" required autofocus></div>
 
 				    	<div><label>Digite sua senha</label></div>
-				    	<div><input class="senha_usuario" type="password" id="senha_usuario" name="senha_usuario" required></div>
+				    	<div><input class="senha_usuario" type="password" id="senha_usuario" name="senha" required></div>
 
 				    	<div><input class="botao_login" type="submit" id="btn_entrar" name="btn_entrar" value="Entrar"></div>
 				    </div>

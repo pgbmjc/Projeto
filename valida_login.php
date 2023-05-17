@@ -3,28 +3,28 @@
 	require('conexao.php');
 
 
-	if (isset($_POST['nome_login'])) {      
+	if (isset($_POST['usuario'])) {      
 	
-		$nome_login = $_POST['nome_login'];
-		$senha_login = md5($_POST['senha_login']);
+		$usuario = $_POST['usuario'];
+		$senha = md5($_POST['senha']);
 	
-		$sql_valida_login = mysqli_query($conexao,"SELECT * FROM login WHERE nome_login = '".$nome_login."' AND senha_login = '".$senha_login."'");
+		$sql_valida_login = mysqli_query($conexao,"SELECT * FROM portal_login WHERE usuario = '".$usuario."' AND senha = '".$senha."'");
 		
 		if(mysqli_num_rows($sql_valida_login) > 0){
 	
 			$registros_login = mysqli_fetch_assoc($sql_valida_login);
 				 
-			$_SESSION['nome_completo_login'] = $registros_login['nome_completo_login'];
-			$_SESSION['nome_login'] = $registros_login['nome_login'];
-			$_SESSION['tipo_login'] = $registros_login['tipo_login'];
+			$_SESSION['nome'] = $registros_login['nome'];
+			$_SESSION['usuario'] = $registros_login['usuario'];
+			$_SESSION['tipo'] = $registros_login['tipo'];
 
 
 			$_SESSION['url'] = $url;
 			$_SESSION['url_admin'] = $url_admin;
-			$_SESSION['url_aluno'] = $url_aluno;
+			$_SESSION['url'] = $url;
 					
 			
-				if($_SESSION['tipo_login'] == 0){
+				if($_SESSION['tipo'] == 0){
 
 					/*echo "<script> alert('Administrador [LOGADO]');</script>";*/
 
@@ -37,7 +37,7 @@
 
 					/*echo "<script> alert('Aluno [LOGADO]');</script>";*/
 
-					echo "<script> window.location.href='$url_aluno';</script>";
+					echo "<script> window.location.href='$url';</script>";
 
 				}
 			
