@@ -45,7 +45,7 @@
 
 			echo "<script> alert('Erro ao fazer login. Tente novamente ou fale com o Administrador.');</script>";
 
-			echo "<script> window.location.href='$url';</script>";
+			echo "<script> window.location.href='$url_login_gestao';</script>";
 			
 		}
 

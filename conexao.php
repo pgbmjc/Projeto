@@ -17,5 +17,7 @@
 	$url_admin = "http://".$host_ip."/projeto/admin";
 
 	$url_aluno = "http://".$host_ip."/projeto";
+
+	$url_login_gestao = "http://".$host_ip."/projeto/login_gestao.php";
 	
 ?>
