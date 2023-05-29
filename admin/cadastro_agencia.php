@@ -1,18 +1,10 @@
+<?php require ('menu_gestao.php');?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" type="text/css" href="../css/portal_gestao.css">
-		<title>Rental World</title>
-	</head>
-
+	
 <body>
-	<header>
-    	 <div>
-			<?php include 'menu_gestao.html';?>
-		</div>
-	</header>
 
 	<main>
 		<form id="agencia" name="agencia" class="form_cadastro" method="post" action="conexao.php">

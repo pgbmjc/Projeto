@@ -41,7 +41,7 @@
     margin-right: 100px;
 }
 
-.portal_cliente_div a{
+.portal_cliente_div label, a{
     font-size: 10pt;
     color: #FFF;
     display: inline-block;
@@ -290,6 +290,15 @@ td {
     vertical-align: inherit;
 }
 
+td a img{
+    width: 15px;
+    appearance: none;
+    background-color: initial;
+    cursor: pointer;
+    padding: initial;
+    border: initial;
+}
+
 input[type="image" i] {
     width: 15px;
     appearance: none;
@@ -298,6 +307,8 @@ input[type="image" i] {
     padding: initial;
     border: initial;
 }
+
+
 
 /* pagina cadastro cliente */
 

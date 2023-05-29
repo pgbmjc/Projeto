@@ -1,3 +1,37 @@
+<?php session_start();
+
+    
+	if (!isset($_SESSION['usuario'])) {	
+	    
+	    session_destroy();
+	 
+	    unset ($_SESSION['usuario']);
+	    unset ($_SESSION['tipo']);
+
+		echo "<script> alert ('ERRO: É NECESSÁRIO FAZER LOGIN');</script>";
+		
+		echo "<script> window.location.href='http://localhost/projeto';</script>";
+
+	}	
+
+	if ($_SESSION['tipo'] <> 0) {
+
+		echo "<script> alert('ERRO: VOCÊ NÃO TEM PERMISSÃO PARA ACESSAR ESTA PÁGINA!');</script>";					
+		session_destroy();
+	 
+		unset ($_SESSION['nome']);
+		unset ($_SESSION['usuario']);
+		unset ($_SESSION['tipo']);
+
+		unset ($_SESSION['url']);
+		unset ($_SESSION['url_admin']);
+		unset ($_SESSION['url_aluno']);
+
+		echo "<script> window.location.href='http://localhost/projeto';</script>";				
+	} 
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
@@ -6,7 +40,7 @@
 		<link rel="stylesheet" type="text/css" href="../css/portal_gestao.css">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
         <title>Rental World</title>
-	</head>
+    </head>
 
 <doby>
 
@@ -18,11 +52,11 @@
         </div>
 
         <div class="portal_cliente_div">
-            <a href="index.php">Nome do usuario</a>
+            <label><?php echo $_SESSION['nome'];?></label>
             <grafic>
-                <a href="../index.php"><img src="../img/sair1.png" class="fig_login"></a>
+                <a href="../sair.php"><img src="../img/sair1.png" class="fig_login"></a>
             </grafic>  
-            <a href="../index.php">sair</a>
+            <a href="../sair.php">sair</a>
         </div>
     </div>
 
