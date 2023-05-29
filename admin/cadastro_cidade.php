@@ -78,7 +78,7 @@
 		    	var resposta = confirm("Deseja continuar com a exclusão?");
 		     
 		    	if (resposta == true) {     
-		        window.location.href = "excluir_cidade.php?codigo="+codigo;
+		        window.location.href = "comandos/excluir_cidade.php?codigo="+codigo;
 		    	}
 			}
 		</script>
@@ -131,7 +131,7 @@
 				<td><?php echo $dados_cidade['estado'];?></td>
                 <td><?php echo $dados_cidade['cidade'];?></td>
 				<td>
-					<a href="editar.php?codigo=<?php echo $dados_cidade['codigo'];?>">
+					<a href="comandos/editar_cidade.php?codigo=<?php echo $dados_cidade['codigo'];?>">
 					<img src="../img/editar.png" title="Editar"></a>
 				</td>
 				<td>

@@ -1,6 +1,6 @@
-<?php require('topo_gestao.php');
+<?php require('../menu_gestao.php');
 
-	require('../conexao.php');
+	require('../../conexao.php');
 
 
 	$codigo = $_GET['codigo'];
