@@ -12,24 +12,6 @@
 		$estado = $_POST['estado'];
 
 		$update_cidade = "UPDATE cidade SET cidade = '".$cidade."', estado = '".$estado."' WHERE codigo = $codigo";
-	
-	
-		if (mysqli_query($conexao,$update_cidade)) {
-
-				mysqli_close($conexao);
-
-				echo "<script> alert ('CIDADE ATUALIZADO COM SUCESSO!');</script>";
-
-				echo "<script> window.location.href='$url_admin/curso/exibir.php';</script>";
-				
-			} else {
-			
-				echo "<script> alert ('ERRO: NÃO FOI POSSÍVEL ATUALIZAR.');</script>";
-
-				echo "<script> window.location.href='$url_admin/cadastro_cidade.php';</script>";
-				
-				mysqli_close($conexao);
-			}
 	}
 	
 	//INSERIR DADOS
@@ -68,25 +50,18 @@
 
 ?>
 
-
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
 		<script>
 			function confirmar_exclusao(codigo) {
-		     
 		    	var resposta = confirm("Deseja continuar com a exclusão?");
-		     
-		    	if (resposta == true) {     
-		        window.location.href = "comandos/excluir_cidade.php?codigo="+codigo;
-		    	}
+		       	if (resposta == true) { window.location.href = "comandos/excluir_cidade.php?codigo="+codigo;}
 			}
 		</script>
-		</head>
-
+	</head>
 
 <body>
-	
 	<main>
 		<form class="form_cadastro" method="post">
 			<h2> Cidade </h2><br>

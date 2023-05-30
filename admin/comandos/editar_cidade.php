@@ -93,12 +93,12 @@
 			
 				<div>
 					<label>Estado</label>
-					<input class="input_cadastro" type="text" placeholder="amazonas, são paulo" name="estado" value="<?php echo $dados_cidade['estado'];?>" required autofocus>>
+					<input class="input_cadastro" type="text" name="estado" value="<?php echo $dados_cidade['estado'];?>" required autofocus>>
 				</div>
 
 				<div>
 					<label>Cidade</label>
-					<input class="input_cadastro" type="text" placeholder="manaus, fortaleza" name="cidade" value="<?php echo $dados_cidade['cidade'];?>" required autofocus>>
+					<input class="input_cadastro" type="text" name="cidade" value="<?php echo $dados_cidade['cidade'];?>" required autofocus>>
 				</div>
 				
 			</div>
