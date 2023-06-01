@@ -95,7 +95,7 @@
 				
 			</div>
 				<div class="botoes">
-                    <input class="botao" type="submit" id="btn_salvar" name="btn_salvar" value="Incluir">
+                    <input class="botao" type="submit" id="btn_salvar" name="btn_salvar" value="Salvar">
             	</div>
 		</form>
 	</main>

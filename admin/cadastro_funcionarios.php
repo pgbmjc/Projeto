@@ -1,43 +1,104 @@
-<?php require ('menu_gestao.php');?>
+<?php require ('menu_gestao.php');
+
+require('../conexao.php');
+
+//VERIFICANDO DADOS PARA ATUALIZAR
+if (isset($_POST['codigo'])) {
+
+	$codigo = $_POST['codigo'];      
+	$nome = $_POST['nome'];
+	$usuario = $_POST['usuario'];
+	$senha = md5($_POST['senha']);
+	$tipo = $_POST['tipo'];
+	$telefone = $_POST['telefone'];
+	
+	$update_funcionarios = "UPDATE portal_login SET nome = '".$nome."', usuario = '".$usuario."', senha = '".$senha."', tipo = '".$tipo."', telefone = '".$telefone."'  WHERE codigo = $codigo";
+}
+
+//INSERIR DADOS
+else if (isset($_POST['btn_salvar'])) {      
+
+	$nome = $_POST['nome'];
+	$usuario = $_POST['usuario'];
+	$senha = md5($_POST['senha']);
+	$tipo = $_POST['tipo'];
+	$telefone = $_POST['telefone'];
+	
+	$insert_funcionarios = "INSERT INTO portal_login (nome, usuario, senha, tipo, telefone) VALUES ('$nome','$usuario','$senha','$tipo','$telefone')";
+
+	if (mysqli_query($conexao,$insert_funcionarios)) {
+
+			mysqli_close($conexao);
+
+			echo "<script> alert ('CADASTRADO COM SUCESSO!');</script>";
+
+			echo "<script> window.location.href='$url_admin/cadastro_funcionarios.php';</script>";
+			
+		} else {
+		
+			echo "<script> alert ('ERRO: NÃO FOI POSSÍVEL CADASTRAR.');</script>";
+
+			echo "<script> window.location.href='$url_admin/cadastro_funcionarios.php';</script>";
+			
+			mysqli_close($conexao);
+		}
+} 
+
+//SELECIONAR DADOS
+$select_funcionarios = mysqli_query($conexao, "SELECT * FROM portal_login ORDER BY codigo ASC");
+
+if (mysqli_num_rows($select_funcionarios) > 0) {
+	
+	$dados_funcionarios = mysqli_fetch_assoc($select_funcionarios);
+}
+
+?>
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
-
+	<head>
+		<script>
+			function confirmar_exclusao(codigo) {
+		    	var resposta = confirm("Deseja continuar com a exclusão?");
+		       	if (resposta == true) { window.location.href = "comandos/excluir_funcionarios.php?codigo="+codigo;}
+			}
+		</script>
+	</head>
 <body>
 
 	<main>
-		<form id="portaol_login" name="portal_login" class="form_cadastro" method="post" action="conexao.php">
+		<form name="portal_login" class="form_cadastro" method="post">
 		    <h2>Cadastro de Funcionario</h2><br>
 		    
 			<div class="cadastro_div">
 				<div>
 					<label>Nome Completo</label>
-					<input class="input_cadastro" type="text" id="nome" nome="nome" required autofocus>
+					<input class="input_cadastro" type="text" name="nome" required autofocus>
 				</div>
 				
 				<div>
 					<label>Usuario para login</label>
-					<input class="input_cadastro" type="text" id="usuario" nome="usuario" required autofocus>
+					<input class="input_cadastro" type="text" name="usuario" required autofocus>
 				</div>
 
 				<div>
 					<label>Senha</label>
-					<input class="input_cadastro" type="password" id="senha" nome="senha" required autofocus>
+					<input class="input_cadastro" type="password" name="senha" required autofocus>
 				</div>
 
 				<div>
 					<label>Tipo de Usuario</label>
-					<input class="input_cadastro" type="int" placeholder="0-Administrador 1-Usuario" id="tipo" nome="tipo" required autofocus>
+					<input class="input_cadastro" type="number" placeholder="0-Administrador 1-Usuario" name="tipo" required autofocus>
 				</div>
 
 				<div>
 					<label>Telefone</label>
-					<input class="input_cadastro" type="tel" placeholder="99 99999-9999" pattern="[0-9]{2}-[0-9]{5}-[0-9]{4}" id="celular" nome="celular" required autofocus>
+					<input class="input_cadastro" type="number" placeholder="99 99999-9999" name="telefone" required autofocus>
 				</div>
 			</div>
 
 			<div class="botoes">
-                <input class="botao" type="submit" id="btn_buscar" name="btn_buscar" value="Buscar">
                 <input class="botao" type="submit" id="btn_salvar" name="btn_salvar" value="Incluir">
                 <input class="botao" type="reset" value="Limpar">
             </div>
@@ -56,36 +117,32 @@
 			</tr>
 		</therd>
 		<tbody>
+		
+		<?php do{
+				
+				?>
+
 			<tr>
-				<td>01</td>
-				<td>Paulo Giovani</td>
-				<td>pgbm</td>
-				<td>********</td>
-				<td>0</td>
-				<td>92 99146-7767</td>
-				<td><input type="image" name="editar_table" id="btn_editar" src="../img/editar.png" onclick=""></td>
-				<td><input type="image" name="delete_table" id="btn_delete" src="../img/lixeira.png" onclick=""></td>
+				<td><?php echo $dados_funcionarios['codigo'];?></td>
+				<td><?php echo $dados_funcionarios['nome'];?></td>
+				<td><?php echo $dados_funcionarios['usuario'];?></td>
+				<td><?php echo $dados_funcionarios['senha'];?></td>
+				<td><?php echo $dados_funcionarios['tipo'];?></td>
+				<td><?php echo $dados_funcionarios['telefone'];?></td>
+				
+				<td>
+					<a href="comandos/editar_funcionarios.php?codigo=<?php echo $dados_funcionarios['codigo'];?>">
+					<img src="../img/editar.png" title="Editar"></a>
+				</td>
+				
+				<td>
+					<a href="javascript:func()" onclick="confirmar_exclusao('<?php echo $dados_funcionarios['codigo'];?>')">
+					<img src="../img/lixeira.png" title="Excluir"></a>
+				</td>
 			</tr>
-			<tr>
-				<td>02</td>
-				<td>Lucas Lucas</td>
-				<td>luck</td>
-				<td>********</td>
-				<td>1</td>
-				<td>92 9999-9999</td>
-				<td><input type="image" name="editar_table" id="btn_editar" src="../img/editar.png" onclick=""></td>
-				<td><input type="image" name="delete_table" id="btn_delete" src="../img/lixeira.png" onclick=""></td>
-			</tr>
-			<tr>
-				<td>03</td>
-				<td>Rafael Rafael</td>
-				<td>rafa</td>
-				<td>********</td>
-				<td>0</td>
-				<td>92 9999-9999</td>
-				<td><input type="image" name="editar_table" id="btn_editar" src="../img/editar.png" onclick=""></td>
-				<td><input type="image" name="delete_table" id="btn_delete" src="../img/lixeira.png" onclick=""></td>
-			</tr>
+
+			<?php }while ($dados_funcionarios = mysqli_fetch_assoc($select_funcionarios));?>
+
 		</tbody>
 	</table>
 	<footer>

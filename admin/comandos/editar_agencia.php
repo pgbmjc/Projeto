@@ -1,6 +1,25 @@
-<?php require ('menu_gestao.php');
+<?php require('../menu_gestao.php');
 
-require('../conexao.php');
+	require('../../conexao.php');
+
+
+$codigo = $_GET['codigo'];
+
+$select_agencia = mysqli_query($conexao, "SELECT * FROM agencia WHERE codigo = $codigo");
+	
+if (mysqli_num_rows($select_agencia) > 0) {
+    
+    $dados_agencia = mysqli_fetch_assoc($select_agencia);
+    
+} else {
+    
+    echo "<script> alert ('NÃO EXISTEM AGENCIAS CADASTRADAS!');</script>";
+        
+    echo "<script> window.location.href='$url_admin/cadastro_agencia.php';</script>";
+
+}
+
+
 
 //VERIFICANDO DADOS PARA ATUALIZAR
 if (isset($_POST['codigo'])) {
@@ -13,6 +32,23 @@ if (isset($_POST['codigo'])) {
 	$fk_cidade_codigo = $_POST['fk_cidade_codigo'];
 		
 	$update_agencia = "UPDATE agencia SET rua = '".$rua."', bairro = '".$bairro."', cep = '".$cep."', complemento = '".$complemento."', fk_cidade_codigo = '".$fk_cidade_codigo."' WHERE codigo = $codigo";
+
+    if (mysqli_query($conexao,$update_agencia)) {
+
+        mysqli_close($conexao);
+
+        echo "<script> alert ('AGENCIA ATUALIZADO COM SUCESSO!');</script>";
+
+        echo "<script> window.location.href='$url_admin/cadastro_agencia.php';</script>";
+        
+    } else {
+    
+        echo "<script> alert ('ERRO: NÃO FOI POSSÍVEL ATUALIZAR.');</script>";
+
+        echo "<script> window.location.href='$url_admin/cadastro_agencia.php';</script>";
+        
+        mysqli_close($conexao);
+    }
 }
 
 //INSERIR DADOS
@@ -44,29 +80,12 @@ else if (isset($_POST['btn_salvar'])) {
 		}
 } 
 
-//SELECIONAR DADOS
-$select_agencia = mysqli_query($conexao, "SELECT * FROM agencia ORDER BY codigo ASC");
-
-if (mysqli_num_rows($select_agencia) > 0) {
-	
-	$dados_agencia = mysqli_fetch_assoc($select_agencia);
-}
-
 ?>
 
 
 <!DOCTYPE html>
 <html lang="pt-br">
-	<head>
-		<script>
-			function confirmar_exclusao(codigo) {
-		    	var resposta = confirm("Deseja continuar com a exclusão?");
-		       	if (resposta == true) { window.location.href = "comandos/excluir_agencia.php?codigo="+codigo;}
-			}
-		</script>
-	</head>	
-	
-	<body>
+<body>
 
 	<?php
 	//SELECIONAR DADOS TABELA ESTRANGEIRA (CIDADE)
@@ -95,78 +114,37 @@ if (mysqli_num_rows($select_agencia) > 0) {
                 
 				</div>
 
+                <div>
+					<label>Codigo</label>
+					<input class="input_cadastro" type="number" name="codigo" value="<?php echo $dados_agencia['codigo'];?>" readonly>>
+				</div>
+
 				<div>
 					<label>Rua</label>
-					<input class="input_cadastro" type="text" placeholder="rua, av" name="rua" required autofocus>
+					<input class="input_cadastro" type="text" name="rua" value="<?php echo $dados_agencia['rua'];?>" required autofocus>>
 				</div>
 				
                 <div>
 					<label>Bairro</label>
-					<input class="input_cadastro" type="text" placeholder="informe o bairro" name="bairro" required autofocus>
+					<input class="input_cadastro" type="text" name="bairro" value="<?php echo $dados_agencia['bairro'];?>" required autofocus>>
 				</div>
 
                 <div>
 					<label>Cep</label>
-					<input class="input_cadastro" type="number" placeholder="informe o CEP" name="cep" required autofocus>
+					<input class="input_cadastro" type="number" name="cep" value="<?php echo $dados_agencia['cep'];?>" required autofocus>>
 				</div>
 
                 <div>
 					<label>Complemento</label>
-					<input class="input_cadastro" type="text," placeholder="complemento" name="complemento">
+					<input class="input_cadastro" type="text," name="complemento" value="<?php echo $dados_agencia['complemento'];?>">>
 				</div>
 
 
 			</div>
 				<div class="botoes">
-                    <input class="botao" type="submit" id="btn_salvar" name="btn_salvar" value="Incluir">
-                    <input class="botao" type="reset" value="Limpar">
-            	</div>
+                    <input class="botao" type="submit" id="btn_salvar" name="btn_salvar" value="Salvar">
+                </div>
 		</form>
 	</main>
-
-	<table>
-			<thead>
-				<tr>
-					<th>Codigo</th>
-					<th>Cidade</th>
-					<th>Rua</th>
-					<th>Bairro</th>
-					<th>CEP</th>
-					<th>Complemento</th>
-				</tr>
-			</therd>
-			<tbody>
-
-			<?php do{
-				
-				?>
-
-				<tr>
-					<td><?php echo $dados_agencia['codigo'];?></td>
-					<td><?php echo $dados_agencia['fk_cidade_codigo'];?></td>
-					<td><?php echo $dados_agencia['rua'];?></td>
-					<td><?php echo $dados_agencia['bairro'];?></td>
-					<td><?php echo $dados_agencia['cep'];?></td>
-					<td><?php echo $dados_agencia['complemento'];?></td>
-					
-					<td>
-						<a href="comandos/editar_agencia.php?codigo=<?php echo $dados_agencia['codigo'];?>">
-						<img src="../img/editar.png" title="Editar"></a>
-					</td>
-				
-					<td>
-						<a href="javascript:func()" onclick="confirmar_exclusao('<?php echo $dados_agencia['codigo'];?>')">
-						<img src="../img/lixeira.png" title="Excluir"></a>
-					</td>
-				</tr>
-				
-				<?php }while ($dados_agencia = mysqli_fetch_assoc($select_agencia));?>
-			</tbody>
-		</table>
-	<footer>
-       	<div>
-			<?php include 'rodape_gestao.html';?>
-		</div>
-	</footer>
 </body>
 </html>

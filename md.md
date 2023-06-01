@@ -105,3 +105,5 @@ https://www.remove.bg/pt-br  - Remover fundos de fotos
 				mysqli_close($conexao);
 			}
 	} 
+
+	

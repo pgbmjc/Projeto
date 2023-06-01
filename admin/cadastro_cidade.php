@@ -79,7 +79,6 @@
 				
 			</div>
 				<div class="botoes">
-                    <input class="botao" type="submit" name="btn_buscar" value="Buscar">
                     <input class="botao" type="submit" name="btn_salvar" value="Incluir">
                     <input class="botao" type="reset" value="Limpar">
             	</div>
