@@ -1,11 +1,27 @@
-<?php require ('menu_gestao.php');
+<?php require('../menu_gestao.php');
 
-require('../conexao.php');
+	require('../../conexao.php');
+
+
+$codigo = $_GET['codigo'];
+
+$select_veiculo = mysqli_query($conexao, "SELECT * FROM veiculo WHERE codigo = $codigo");
+	
+if (mysqli_num_rows($select_veiculo) > 0) {
+    
+    $dados_veiculo = mysqli_fetch_assoc($select_veiculo);
+    
+} else {
+    
+    echo "<script> alert ('NÃO EXISTEM AGENCIAS CADASTRADAS!');</script>";
+        
+    echo "<script> window.location.href='$url_admin/cadastro_veiculos.php';</script>";
+
+}
 
 //VERIFICANDO DADOS PARA ATUALIZAR
 if (isset($_POST['codigo'])) {
 
-	$codigo = $_POST['codigo'];      
 	$marca = $_POST['marca'];
 	$modelo = $_POST['modelo'];
 	$descricao = $_POST['descricao'];
@@ -13,14 +29,31 @@ if (isset($_POST['codigo'])) {
 	$placa = $_POST['placa'];
 	$fk_categoria_codigo = $_POST['fk_categoria_codigo'];
 	$fk_agencia_codigo = $_POST['fk_agencia_codigo'];
-
+		
 	$update_veiculo = "UPDATE veiculo SET marca = '".$marca."', modelo = '".$modelo."', descricao = '".$descricao."', ano = '".$ano."', placa = '".$placa."', fk_categoria_codigo = '".$fk_categoria_codigo."', fk_agencia_codigo = '".$fk_agencia_codigo."' WHERE codigo = $codigo";
+
+    if (mysqli_query($conexao,$update_veiculo)) {
+
+        mysqli_close($conexao);
+
+        echo "<script> alert ('AGENCIA ATUALIZADO COM SUCESSO!');</script>";
+
+        echo "<script> window.location.href='$url_admin/cadastro_veiculos.php';</script>";
+        
+    } else {
+    
+        echo "<script> alert ('ERRO: NÃO FOI POSSÍVEL ATUALIZAR.');</script>";
+
+        echo "<script> window.location.href='$url_admin/cadastro_veiculos.php';</script>";
+        
+        mysqli_close($conexao);
+    }
 }
 
 //INSERIR DADOS
 else if (isset($_POST['btn_salvar'])) {      
 
-	$marca = $_POST['marca'];
+    $marca = $_POST['marca'];
 	$modelo = $_POST['modelo'];
 	$descricao = $_POST['descricao'];
 	$ano = $_POST['ano'];
@@ -48,16 +81,7 @@ else if (isset($_POST['btn_salvar'])) {
 		}
 } 
 
-//SELECIONAR DADOS
-$select_veiculo = mysqli_query($conexao, "SELECT * FROM veiculo ORDER BY codigo ASC");
-
-if (mysqli_num_rows($select_veiculo) > 0) {
-	
-	$dados_veiculo = mysqli_fetch_assoc($select_veiculo);
-}
-
 ?>
-
 
 
 <!DOCTYPE html>
@@ -120,89 +144,42 @@ if (mysqli_num_rows($select_veiculo) > 0) {
 					</select>
 				</div>
 
+                <div>
+					<label>Código do veiculo</label>
+					<input class="input_cadastro" type="text" name="codigo" value="<?php echo $dados_veiculo['codigo'];?>" readonly>>
+				</div>
+
+
 				<div>
 					<label>Cadastre a marca do veiculo</label>
-					<input class="input_cadastro" type="text" placeholder="GM, Ford, Volkswagen, etc" name="marca" required autofocus>
+					<input class="input_cadastro" type="text" name="marca" value="<?php echo $dados_veiculo['marca'];?>" required autofocus>>
 				</div>
 
 				<div>
 					<label>Cadastre o modelo do veiculo</label>
-					<input class="input_cadastro" type="text" placeholder="Gol, Mercedes-Bens, Palio" name="modelo" required autofocus>
+					<input class="input_cadastro" type="text" name="modelo" value="<?php echo $dados_veiculo['modelo'];?>" required autofocus>>
 				</div>
 
 				<div>
 					<label>Cadastre ano do veiculo</label>
-					<input class="input_cadastro" type="text" placeholder="0000" name="ano" required autofocus>
+					<input class="input_cadastro" type="text" name="ano" value="<?php echo $dados_veiculo['ano'];?>" required autofocus>>
 				</div>
 
 				<div>
 					<label>Descrição do veiculo</label>
-					<input class="input_cadastro" type="text" placeholder="Cor, Tipo, Qtd passageiros" name="descricao" required autofocus>
+					<input class="input_cadastro" type="text" name="descricao" value="<?php echo $dados_veiculo['descricao'];?>" required autofocus>>
 				</div>
 
 				<div>
 					<label>Placa do veiculo</label>
-					<input class="input_cadastro" type="text" placeholder="000-0000" name="placa" required autofocus>
+					<input class="input_cadastro" type="text" name="placa" value="<?php echo $dados_veiculo['placa'];?>" required autofocus>>
 				</div>
 			</div>
 
 			<div class="botoes">
-                <input class="botao" type="submit" id="btn_salvar" name="btn_salvar" value="Incluir">
-                <input class="botao" type="reset" value="Limpar">
+                <input class="botao" type="submit" id="btn_salvar" name="btn_salvar" value="Salvar">
             </div>
 		</form>
 	</main>
-
-	<table>
-		<thead>
-			<tr>
-				<th>Codigo</th>
-				<th>Categoria</th>
-				<th>Agencia</th>
-				<th>Marca</th>
-				<th>Modelo</th>
-				<th>Descrição</th>
-				<th>Ano</th>
-				<th>Placa</th>
-			</tr>
-		</therd>
-		<tbody>
-
-			<?php do{
-				
-			?>
-
-			<tr>
-				<td><?php echo $dados_veiculo['codigo'];?></td>
-				<td><?php echo $dados_veiculo['fk_categoria_codigo'];?></td>
-				<td><?php echo $dados_veiculo['fk_agencia_codigo'];?></td>
-				<td><?php echo $dados_veiculo['marca'];?></td>
-				<td><?php echo $dados_veiculo['modelo'];?></td>
-				<td><?php echo $dados_veiculo['descricao'];?></td>
-				<td><?php echo $dados_veiculo['ano'];?></td>
-				<td><?php echo $dados_veiculo['placa'];?></td>
-
-				<td>
-					<a href="comandos/editar_veiculo.php?codigo=<?php echo $dados_veiculo['codigo'];?>">
-					<img src="../img/editar.png" title="Editar"></a>
-				</td>
-				
-				<td>
-					<a href="javascript:func()" onclick="confirmar_exclusao('<?php echo $dados_veiculo['codigo'];?>')">
-					<img src="../img/lixeira.png" title="Excluir"></a>
-				</td>
-			</tr>
-				
-				<?php }while ($dados_veiculo = mysqli_fetch_assoc($select_veiculo));?>
-			
-		</tbody>
-	</table>
-
-	<footer>
-   		<div>
-			<?php include 'rodape_gestao.html';?>
-		</div>
-	</footer>
-
 </body>
 </html>
