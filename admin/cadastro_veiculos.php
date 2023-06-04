@@ -18,7 +18,7 @@ if (isset($_POST['codigo'])) {
 }
 
 //INSERIR DADOS
-else if (isset($_POST['btn_salvar'])) {      
+	else if (isset($_POST['btn_salvar'])) {      
 
 	$marca = $_POST['marca'];
 	$modelo = $_POST['modelo'];

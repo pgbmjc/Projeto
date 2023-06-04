@@ -1,11 +1,26 @@
-<?php require ('menu_gestao.php');
+<?php require('../menu_gestao.php');
 
-require('../conexao.php');
+	require('../../conexao.php');
+
+
+$codigo = $_GET['codigo'];
+
+$select_reserva = mysqli_query($conexao, "SELECT * FROM reservas WHERE codigo = $codigo");
+	
+if (mysqli_num_rows($select_reserva) > 0) {
+    
+    $dados_reserva = mysqli_fetch_assoc($select_reserva);
+    
+} else {
+    
+    echo "<script> alert ('NÃO EXISTEM AGENCIAS CADASTRADAS!');</script>";
+        
+    echo "<script> window.location.href='$url_admin/cadastro_reserva.php';</script>";
+
+}
 
 //VERIFICANDO DADOS PARA ATUALIZAR
 if (isset($_POST['codigo'])) {
-
-	$codigo = $_POST['codigo'];      
 
 	$dt_prev_retirada = $_POST['dt_prev_retirada'];
 		$dt_prev_retirada = explode("T", $dt_prev_retirada);
@@ -31,6 +46,23 @@ if (isset($_POST['codigo'])) {
 	$fk_agencia_codigo = $_POST['fk_agencia_codigo'];
 
 	$update_reservas = "UPDATE reservas SET dt_prev_retirada = '".$dt_prev_retirada."', dt_prev_devolucao = '".$dt_prev_devolucao."', dt_reserva = '".$dt_reserva."', fk_cliente_codigo = '".$fk_cliente_codigo."', fk_veiculo_codigo = '".$fk_veiculo_codigo."', fk_agencia_codigo = '".$fk_agencia_codigo."' WHERE codigo = $codigo";
+
+    if (mysqli_query($conexao,$update_reservas)) {
+
+        mysqli_close($conexao);
+
+        echo "<script> alert ('AGENCIA ATUALIZADO COM SUCESSO!');</script>";
+
+        echo "<script> window.location.href='$url_admin/cadastro_reserva.php';</script>";
+        
+    } else {
+    
+        echo "<script> alert ('ERRO: NÃO FOI POSSÍVEL ATUALIZAR.');</script>";
+
+        echo "<script> window.location.href='$url_admin/cadastro_reserva.php';</script>";
+        
+        mysqli_close($conexao);
+    }
 }
 
 //INSERIR DADOS
@@ -61,7 +93,7 @@ else if (isset($_POST['btn_salvar'])) {
 	
 	$insert_reserva = "INSERT INTO reservas (dt_prev_retirada, dt_prev_devolucao, dt_reserva, fk_cliente_codigo, fk_veiculo_codigo, fk_agencia_codigo) VALUES ('$dt_prev_retirada','$dt_prev_devolucao','$dt_reserva','$fk_cliente_codigo','$fk_veiculo_codigo','$fk_agencia_codigo')";
 
-		if (mysqli_query($conexao,$insert_reserva)) {
+	if (mysqli_query($conexao,$insert_reserva)) {
 
 			mysqli_close($conexao);
 
@@ -69,7 +101,7 @@ else if (isset($_POST['btn_salvar'])) {
 
 			echo "<script> window.location.href='$url_admin/cadastro_reserva.php';</script>";
 			
-} else {
+		} else {
 		
 			echo "<script> alert ('ERRO: NÃO FOI POSSÍVEL CADASTRAR.');</script>";
 
@@ -79,27 +111,10 @@ else if (isset($_POST['btn_salvar'])) {
 		}
 } 
 
-//SELECIONAR DADOS
-$select_reservas = mysqli_query($conexao, "SELECT * FROM reservas ORDER BY codigo ASC");
-
-if (mysqli_num_rows($select_reservas) > 0) {
-	
-	$dados_reservas = mysqli_fetch_assoc($select_reservas);
-}
-
 ?>
-
 
 <!DOCTYPE html>
 <html lang="pt-br">
-	<head>
-		<script>
-			function confirmar_exclusao(codigo) {
-		    	var resposta = confirm("Deseja continuar com a exclusão?");
-		       	if (resposta == true) { window.location.href = "comandos/excluir_reserva.php?codigo="+codigo;}
-			}
-		</script>
-	</head>	
 
 <body>
 
@@ -171,78 +186,31 @@ if (mysqli_num_rows($select_reservas) > 0) {
 				</div>
 
                 <div>
+					<label>Código Reserva</label>
+					<input class="input_cadastro" type="text" name="codigo" value="<?php echo $dados_reserva['codigo'];?>" readonly>>
+				</div>
+                
+                <div>
 					<label>Data e hora da retirada</label>
-					<input class="input_cadastro" type="datetime-local" name="dt_prev_retirada" required autofocus>
+					<input class="input_cadastro" type="datetime-local" name="dt_prev_retirada" value="<?php echo $dados_reserva['dt_prev_retirada'];?>" required autofocus>>
 				</div>
 
                 <div>
 					<label>Data e hora da devolução</label>
-					<input class="input_cadastro" type="datetime-local" name="dt_prev_devolucao" required autofocus>
+					<input class="input_cadastro" type="datetime-local" name="dt_prev_devolucao" value="<?php echo $dados_reserva['dt_prev_devolucao'];?>" required autofocus>>
 				</div>
 
                 <div>
 					<label>Data da reserva</label>
-					<input class="input_cadastro" type="date" name="dt_reserva" required autofocus>
+					<input class="input_cadastro" type="date" name="dt_reserva" value="<?php echo $dados_reserva['dt_reserva'];?>" required autofocus>>
 				</div>
 
 			    <div class="botoes">
-                    <input class="botao" type="submit" id="btn_salvar" name="btn_salvar" value="Incluir">
-                    <input class="botao" type="reset" value="Limpar">
+                    <input class="botao" type="submit" id="btn_salvar" name="btn_salvar" value="Salva">
             	</div>
             </div>
 		</form>
 	</main>
 	
-	<table>
-		<thead>
-			<tr>
-				<th>Cod reserva</th>
-				<th>Cliente</th>
-				<th>Veiculo</th>
-				<th>Agencia</th>
-				<th>Data_Hora retirada</th>
-				<th>Data_Hora devolução</th>
-				<th>Data de reserva</th>
-			</tr>
-		</therd>
-		<tbody>
-
-			<?php do{
-				
-			?>
-	
-			<tr>
-				<td><?php echo $dados_reservas['codigo'];?></td>
-				<td><?php echo $dados_reservas['fk_cliente_codigo'];?></td>
-				<td><?php echo $dados_reservas['fk_veiculo_codigo'];?></td>
-				<td><?php echo $dados_reservas['fk_agencia_codigo'];?></td>
-				<td><?php echo $dados_reservas['dt_prev_retirada'];?></td>
-				<td><?php echo $dados_reservas['dt_prev_devolucao'];?></td>
-				<td><?php echo $dados_reservas['dt_reserva'];?></td>
-				
-				<td>
-					<a href="comandos/editar_reserva.php?codigo=<?php echo $dados_reservas['codigo'];?>">
-					<img src="../img/editar.png" title="Editar"></a>
-				</td>
-				
-				<td>
-					<a href="javascript:func()" onclick="confirmar_exclusao('<?php echo $dados_reservas['codigo'];?>')">
-					<img src="../img/lixeira.png" title="Excluir"></a>
-				</td>
-				</tr>
-				
-				<?php }while ($dados_reservas = mysqli_fetch_assoc($select_reservas));?>
-
-			</tr>
-			
-			
-		</tbody>
-	</table>
-
-	<footer>
-   		<div>
-			<?php include 'rodape_gestao.html';?>
-		</div>
-	</footer>
 </body>
 </html>
