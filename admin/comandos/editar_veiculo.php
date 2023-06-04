@@ -86,14 +86,6 @@ else if (isset($_POST['btn_salvar'])) {
 
 <!DOCTYPE html>
 <html lang="pt-br">
-	<head>
-		<script>
-			function confirmar_exclusao(codigo) {
-		    	var resposta = confirm("Deseja continuar com a exclusão?");
-		       	if (resposta == true) { window.location.href = "comandos/excluir_veiculo.php?codigo="+codigo;}
-			}
-		</script>
-	</head>	
 
 <body>
 <?php
