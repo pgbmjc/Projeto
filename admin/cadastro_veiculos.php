@@ -49,7 +49,7 @@ if (isset($_POST['codigo'])) {
 } 
 
 //SELECIONAR DADOS
-$select_veiculo = mysqli_query($conexao, "SELECT * FROM veiculo ORDER BY codigo ASC");
+$select_veiculo = mysqli_query($conexao, "SELECT veiculo.*, categoria.categoria FROM `veiculo` LEFT JOIN categoria on veiculo.fk_categoria_codigo = categoria.codigo ORDER BY veiculo.codigo ASC");
 
 if (mysqli_num_rows($select_veiculo) > 0) {
 	
@@ -174,7 +174,7 @@ if (mysqli_num_rows($select_veiculo) > 0) {
 
 			<tr>
 				<td><?php echo $dados_veiculo['codigo'];?></td>
-				<td><?php echo $dados_veiculo['fk_categoria_codigo'];?></td>
+				<td><?php echo $dados_veiculo['categoria'];?></td>
 				<td><?php echo $dados_veiculo['fk_agencia_codigo'];?></td>
 				<td><?php echo $dados_veiculo['marca'];?></td>
 				<td><?php echo $dados_veiculo['modelo'];?></td>
