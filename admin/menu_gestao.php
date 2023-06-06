@@ -10,7 +10,7 @@
 
 		echo "<script> alert ('ERRO: É NECESSÁRIO FAZER LOGIN');</script>";
 		
-		echo "<script> window.location.href='http://localhost/projeto';</script>";
+		echo "<script> window.location.href='http://localhost';</script>";
 
 	}	
 
@@ -27,7 +27,7 @@
 		unset ($_SESSION['url_admin']);
 		unset ($_SESSION['url_aluno']);
 
-		echo "<script> window.location.href='http://localhost/projeto';</script>";				
+		echo "<script> window.location.href='http://localhost';</script>";				
 	} 
 ?>
 
