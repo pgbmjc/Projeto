@@ -45,7 +45,7 @@ else if (isset($_POST['btn_salvar'])) {
 } 
 
 //SELECIONAR DADOS
-$select_agencia = mysqli_query($conexao, "SELECT * FROM agencia ORDER BY codigo ASC");
+$select_agencia = mysqli_query($conexao, "SELECT agencia.*, cidade.cidade FROM `agencia` LEFT JOIN cidade on agencia.fk_cidade_codigo = cidade.codigo ORDER BY agencia.codigo ASC");
 
 if (mysqli_num_rows($select_agencia) > 0) {
 	
@@ -143,7 +143,7 @@ if (mysqli_num_rows($select_agencia) > 0) {
 
 				<tr>
 					<td><?php echo $dados_agencia['codigo'];?></td>
-					<td><?php echo $dados_agencia['fk_cidade_codigo'];?></td>
+					<td><?php echo $dados_agencia['cidade'];?></td>
 					<td><?php echo $dados_agencia['rua'];?></td>
 					<td><?php echo $dados_agencia['bairro'];?></td>
 					<td><?php echo $dados_agencia['cep'];?></td>
