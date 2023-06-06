@@ -30,7 +30,7 @@
 
 					/* echo "<script> window.location.href='$url_admin';</script>";	*/
 					
-					echo "ok"
+					echo "ok";
 
 
 
