@@ -28,8 +28,9 @@
 
 					/*echo "<script> alert('Administrador [LOGADO]');</script>";*/
 
-					echo "<script> window.location.href='$url_admin';</script>";	
+					/* echo "<script> window.location.href='$url_admin';</script>";	*/
 					
+					echo "ok"
 
 
 
