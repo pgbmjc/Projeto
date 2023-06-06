@@ -1,9 +1,9 @@
 <?php //session_start();
 
-	$servidor = "l0ebsc9jituxzmts.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
-	$usuario = "e342qmlogx1yk9ne";
-	$senha = "gewyrdvrwe9qp0op";
-	$db_name = "dk4n1kgz4a05y9g5";
+	$servidor = "localhost";
+	$usuario = "root";
+	$senha = "";
+	$db_name = "db_rental";
 	
 	
 	$conexao = mysqli_connect($servidor, $usuario, $senha, $db_name) or die('Banco de dados indisponível.');
