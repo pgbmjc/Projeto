@@ -12,9 +12,9 @@
 	
 	$host_ip = $_SERVER['HTTP_HOST'];
 	
-	$url = "http://".$host_ip."/projeto";
+	$url = "http://".$host_ip."/";
 
-	$url_admin = "http://".$host_ip."/projeto/admin";
+	$url_admin = "http://".$host_ip."/admin";
 
 	$url_login_gestao = "http://".$host_ip."/login_gestao.php";
 	
