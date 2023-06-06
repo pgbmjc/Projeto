@@ -28,7 +28,7 @@
 
 					/*echo "<script> alert('Administrador [LOGADO]');</script>";*/
 
-					echo "<script> window.location.href='/projeto/admin/';</script>";	
+					echo "<script> window.location.href='/projeto/admin/index.php';</script>";	
 					
 
 
