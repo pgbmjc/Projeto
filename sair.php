@@ -1,6 +1,6 @@
 ﻿<?php 
 	session_start(); 
 	session_destroy(); 
-	header("Location: http://localhost/projeto"); 
+	header("Location: http://localhost"); 
 	exit;
 ?>
