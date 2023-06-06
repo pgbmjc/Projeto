@@ -10,7 +10,7 @@
 	
 	date_default_timezone_set("America/Manaus");
 	
-	$host_ip = 'rentalworld.herokuapp.com';
+	$host_ip = $_SERVER['HTTP_HOST'];
 	
 	$url = "http://".$host_ip."/projeto";
 
