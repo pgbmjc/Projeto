@@ -130,7 +130,7 @@ else if (isset($_POST['btn_salvar'])) {
 					<select class="input_cadastro" name="fk_agencia_codigo">
 						<?php do{
 						?>
-						<option value="<?php echo $dados_agencia['codigo'];?>"><?php echo $dados_agencia['bairro'];?></option>
+						<option value="<?php echo $dados_agencia['codigo'];?>"><?php echo $dados_agencia['cidade'];?></option>
 						
 						<?php }while ($dados_agencia = mysqli_fetch_assoc($select_agencia));?>
 					</select>

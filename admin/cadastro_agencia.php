@@ -5,26 +5,26 @@ require('../conexao.php');
 //VERIFICANDO DADOS PARA ATUALIZAR
 if (isset($_POST['codigo'])) {
 
-	$codigo = $_POST['codigo'];      
+	$codigo = $_POST['codigo'];
+	$cidade = $_POST['cidade'];
 	$rua = $_POST['rua'];
 	$bairro = $_POST['bairro'];
 	$cep = $_POST['cep'];
 	$complemento = $_POST['complemento'];
-	$fk_cidade_codigo = $_POST['fk_cidade_codigo'];
-		
-	$update_agencia = "UPDATE agencia SET rua = '".$rua."', bairro = '".$bairro."', cep = '".$cep."', complemento = '".$complemento."', fk_cidade_codigo = '".$fk_cidade_codigo."' WHERE codigo = $codigo";
+			
+	$update_agencia = "UPDATE agencia SET cidade = '".$cidade."', rua = '".$rua."', bairro = '".$bairro."', cep = '".$cep."', complemento = '".$complemento."' WHERE codigo = $codigo";
 }
 
 //INSERIR DADOS
 else if (isset($_POST['btn_salvar'])) {      
 
+	$cidade = $_POST['cidade'];
 	$rua = $_POST['rua'];
 	$bairro = $_POST['bairro'];
 	$cep = $_POST['cep'];
 	$complemento = $_POST['complemento'];
-	$fk_cidade_codigo = $_POST['fk_cidade_codigo'];
 	
-	$insert_agencia = "INSERT INTO agencia (rua, bairro, cep, complemento, fk_cidade_codigo) VALUES ('$rua','$bairro','$cep','$complemento','$fk_cidade_codigo')";
+	$insert_agencia = "INSERT INTO agencia (cidade, rua, bairro, cep, complemento) VALUES ('$cidade','$rua','$bairro','$cep','$complemento')";
 
 	if (mysqli_query($conexao,$insert_agencia)) {
 
@@ -45,7 +45,7 @@ else if (isset($_POST['btn_salvar'])) {
 } 
 
 //SELECIONAR DADOS
-$select_agencia = mysqli_query($conexao, "SELECT agencia.*, cidade.cidade FROM `agencia` LEFT JOIN cidade on agencia.fk_cidade_codigo = cidade.codigo ORDER BY agencia.codigo ASC");
+$select_agencia = mysqli_query($conexao, "SELECT * FROM agencia ORDER BY codigo ASC");
 
 if (mysqli_num_rows($select_agencia) > 0) {
 	
@@ -68,32 +68,15 @@ if (mysqli_num_rows($select_agencia) > 0) {
 	
 	<body>
 
-	<?php
-	//SELECIONAR DADOS TABELA ESTRANGEIRA (CIDADE)
-		$select_cidade = mysqli_query($conexao, "SELECT * FROM cidade");
-
-		if (mysqli_num_rows($select_cidade) > 0) {
-	
-		$dados_cidade = mysqli_fetch_assoc($select_cidade);
-	}
-	?>
-
-	<main>
+		<main>
 		<form name="agencia" class="form_cadastro" method="post">
 			<h2> Cadastro da Agencia </h2><br>
 			<div class="cadastro_div">
 				
                 <div>
-                    <label>Selecione a Cidade</label>
-                    <select class="input_cadastro" name="fk_cidade_codigo">
-						<?php do{
-						?>
-						<option value="<?php echo $dados_cidade['codigo'];?>"><?php echo $dados_cidade['cidade'];?></option>
-						
-						<?php }while ($dados_cidade = mysqli_fetch_assoc($select_cidade));?>
-					</select>
-                
-				</div>
+                    <label>Cidade</label>
+					<input class="input_cadastro" type="text" placeholder="Manaus, Fortaleza, Belém" name="cidade" required autofocus>    
+                </div>
 
 				<div>
 					<label>Rua</label>

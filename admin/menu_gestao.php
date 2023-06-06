@@ -1,6 +1,3 @@
-<?php require('../conexao.php'); ?>
-
-
 <?php session_start();
 
     
@@ -114,7 +111,6 @@
                 </li>
 
                 <ul id="sub_menu_ul3" class="sub_menu_ul">
-                    <li class="sub_menu_li"><a class="menu_a" href="<?php echo $_SESSION['url']."/admin/cadastro_cidade.php"?>">Cidade</a></li>
                     <li class="sub_menu_li"><a class="menu_a" href="<?php echo $_SESSION['url']."/admin/cadastro_pagamento.php"?>">Forma de pagamentos</a></li>
                     <li class="sub_menu_li"><a class="menu_a" href="<?php echo $_SESSION['url']."/admin/cadastro_categoria.php"?>">Categoria</a></li>
                 </ul>
