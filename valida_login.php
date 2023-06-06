@@ -28,11 +28,8 @@
 
 					/*echo "<script> alert('Administrador [LOGADO]');</script>";*/
 
-					// echo "<script> window.location.href='$url_admin';</script>";	
-					echo "<pre>"; 
-					print_r($registros_login);	
-					echo "</pre>"; 
-
+					echo "<script> window.location.href='$url_admin';</script>";	
+					
 
 
 
