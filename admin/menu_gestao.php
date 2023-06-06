@@ -1,3 +1,6 @@
+<?php require('../conexao.php'); ?>
+
+
 <?php session_start();
 
     
@@ -10,7 +13,7 @@
 
 		echo "<script> alert ('ERRO: É NECESSÁRIO FAZER LOGIN');</script>";
 		
-		echo "<script> window.location.href='http://localhost';</script>";
+		echo "<script> window.location.href='$url_admin';</script>";
 
 	}	
 
@@ -27,7 +30,7 @@
 		unset ($_SESSION['url_admin']);
 		unset ($_SESSION['url_aluno']);
 
-		echo "<script> window.location.href='http://localhost';</script>";				
+		echo "<script> window.location.href='$url';</script>";				
 	} 
 ?>
 
