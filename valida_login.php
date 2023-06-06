@@ -29,7 +29,9 @@
 					/*echo "<script> alert('Administrador [LOGADO]');</script>";*/
 
 					// echo "<script> window.location.href='$url_admin';</script>";	
-					echo $registros_login;	
+					echo "<pre>"; 
+					print_r($registros_login);	
+					echo "</pre>"; 
 
 
 
